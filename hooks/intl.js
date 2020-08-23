@@ -6,16 +6,14 @@ function useIntl() {
   const [app] = useContext(AppContext);
   const banana = useContext(BananaContext);
 
-  const [locale] = app.languages;
-
   return useCallback((key, ...parameters) => {
-    if (!locale) {
+    if (app.languages.length === 0) {
       return '';
     }
 
     return banana.i18n(key, ...parameters);
   }, [
-    locale,
+    app.languages,
     banana,
   ]);
 }

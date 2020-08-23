@@ -1,22 +1,20 @@
-import { Message as BananaMessage } from '@wikimedia/react.i18n';
+import { Message as ReactMessage } from '@wikimedia/react.i18n';
 import { useContext, useMemo } from 'react';
 import AppContext from '../context/app';
 
 function Message({ id, params }) {
   const [app] = useContext(AppContext);
 
-  const [locale] = app.languages;
-
   return useMemo(() => {
-    if (!locale) {
+    if (app.languages.length === 0) {
       return null;
     }
 
     return (
-      <BananaMessage id={id} params={params} />
+      <ReactMessage id={id} params={params} />
     );
   }, [
-    locale,
+    app.languages,
     id,
     params,
   ]);
