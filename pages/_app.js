@@ -36,18 +36,30 @@ function reducer(state, action) {
 
 function languagesReactor(value$) {
   return value$.pipe(
-    flatMap((languages) => (
-      from(languages).pipe(
+    flatMap((languages) => {
+      // Dedupe the list, add 'en' when value is 'en-US' lower case everything.
+      const langs = [...languages.reduce((set, locale) => {
+        set.add(locale.toLowerCase());
+
+        if (locale.includes('-')) {
+          const [lang] = locale.split('-');
+          set.add(lang.toLowerCase());
+        }
+
+        return set;
+      }, new Set())];
+
+      return from(langs).pipe(
         // 'en' is the finalFallback so there is no need to load it again.
-        filter((lang) => lang.toLowerCase() !== 'en'),
+        filter((lang) => lang !== 'en'),
         flatMap((lang) => (
-          from(import(`../i18n/${lang.toLowerCase()}.json`)).pipe(
+          from(import(`../i18n/${lang}.json`)).pipe(
             map(({ default: messages }) => ({
-              [lang.toLowerCase()]: messages,
+              [lang]: messages,
             })),
             catchError(() => (
               of({
-                [lang.toLowerCase()]: {},
+                [lang]: {},
               })
             )),
           )
@@ -60,11 +72,11 @@ function languagesReactor(value$) {
           type: LANGUAGES_ADD,
           payload: {
             messages,
-            languages,
+            languages: langs,
           },
         })),
-      )
-    )),
+      );
+    }),
   );
 }
 
@@ -73,7 +85,6 @@ function CovidRatio({ Component, pageProps }) {
   const languages = useReactor(languagesReactor, dispatch);
 
   useEffect(() => {
-    // eslint-disable-next-line no-undef
     languages.next(window.navigator.languages);
   }, [
     languages,
