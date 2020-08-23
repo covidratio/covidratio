@@ -1,62 +1,92 @@
-import '../styles/globals.scss';
 import { useReducer, useEffect } from 'react';
+import { from, of } from 'rxjs';
+import {
+  flatMap, catchError, reduce, map, filter,
+} from 'rxjs/operators';
 import { IntlProvider } from '@wikimedia/react.i18n';
+import useReactor from '@cinematix/reactor';
+import AppContext from '../context/app';
+import messagesEn from '../i18n/en.json';
+import '../styles/globals.scss';
 
 const initialState = {
-  locale: '',
-  messages: {},
+  languages: [],
+  messages: {
+    en: messagesEn,
+  },
 };
 
-const MESSAGES_ADD = 'MESSAGES_ADD';
-const LOCALE_SET = 'LOCALE_SET';
+const LANGUAGES_ADD = 'LANGUAGES_ADD';
 
 function reducer(state, action) {
   switch (action.type) {
-    case MESSAGES_ADD:
+    case LANGUAGES_ADD:
       return {
         ...state,
         messages: {
           ...state.messages,
-          ...action.payload,
+          ...action.payload.messages,
         },
-      };
-    case LOCALE_SET:
-      return {
-        ...state,
-        locale: action.payload,
+        languages: action.payload.languages,
       };
     default:
       throw new Error('Invalid Action');
   }
 }
 
+function languagesReactor(value$) {
+  return value$.pipe(
+    flatMap((languages) => (
+      from(languages).pipe(
+        // 'en' is the finalFallback so there is no need to load it again.
+        filter((lang) => lang.toLowerCase() !== 'en'),
+        flatMap((lang) => (
+          from(import(`../i18n/${lang.toLowerCase()}.json`)).pipe(
+            map(({ default: messages }) => ({
+              [lang.toLowerCase()]: messages,
+            })),
+            catchError(() => (
+              of({
+                [lang.toLowerCase()]: {},
+              })
+            )),
+          )
+        )),
+        reduce((acc, messages) => ({
+          ...acc,
+          ...messages,
+        }), {}),
+        map((messages) => ({
+          type: LANGUAGES_ADD,
+          payload: {
+            messages,
+            languages,
+          },
+        })),
+      )
+    )),
+  );
+}
+
 function CovidRatio({ Component, pageProps }) {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const languages = useReactor(languagesReactor, dispatch);
 
   useEffect(() => {
     // eslint-disable-next-line no-undef
-    window.navigator.languages.forEach((lang) => {
-      import(`../i18n/${lang.toLowerCase()}.json`).then(({ default: messages }) => {
-        dispatch({
-          type: MESSAGES_ADD,
-          payload: {
-            en: messages,
-          },
-        });
-      }).catch(() => { /* Silence is Golden */ });
-    });
+    languages.next(window.navigator.languages);
+  }, [
+    languages,
+  ]);
 
-    dispatch({
-      type: LOCALE_SET,
-      // eslint-disable-next-line no-undef
-      payload: window.navigator.language,
-    });
-  }, []);
+  const [locale] = state.languages;
 
   return (
-    <IntlProvider locale={state.locale} messages={state.messages}>
-      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-      <Component {...pageProps} />
+    <IntlProvider locale={locale || ''} messages={state.messages}>
+      <AppContext.Provider value={[state, dispatch]}>
+        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+        <Component {...pageProps} />
+      </AppContext.Provider>
     </IntlProvider>
   );
 }

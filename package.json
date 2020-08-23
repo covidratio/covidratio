@@ -10,11 +10,13 @@
     "test": "eslint --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@cinematix/reactor": "^2.0.0",
     "@wikimedia/react.i18n": "^2.0.2",
     "bootstrap": "^4.5.2",
     "next": "9.5.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "rxjs": "^6.6.2",
     "sass": "^1.26.10"
   },
   "devDependencies": {

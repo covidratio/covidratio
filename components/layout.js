@@ -1,14 +1,13 @@
-import { useContext } from 'react';
 import Head from 'next/head';
-import { BananaContext } from '@wikimedia/react.i18n';
+import useIntl from '../hooks/intl';
 
 function Layout({ children }) {
-  const banana = useContext(BananaContext);
+  const i18n = useIntl();
 
   return (
     <>
       <Head>
-        <title>{banana.i18n('title')}</title>
+        <title>{i18n('title')}</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
       </Head>

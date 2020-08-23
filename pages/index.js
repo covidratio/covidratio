@@ -1,5 +1,5 @@
-import { Message } from '@wikimedia/react.i18n';
 import Layout from '../components/layout';
+import Message from '../components/message';
 
 function Index() {
   return (
