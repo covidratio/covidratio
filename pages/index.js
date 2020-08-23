@@ -1,9 +1,8 @@
-import { useContext } from 'react';
+import { from } from 'rxjs';
+import { bufferCount, flatMap, reduce } from 'rxjs/operators';
 import Layout from '../components/layout';
 import Message from '../components/message';
 import Group from '../components/group';
-import { from } from 'rxjs';
-import { bufferCount, flatMap, reduce } from 'rxjs/operators';
 
 function Index({ groups }) {
   return (

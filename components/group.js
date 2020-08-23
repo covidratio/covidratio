@@ -1,4 +1,4 @@
-import useLocalItems from "../hooks/local-item";
+import useLocalItems from '../hooks/local-item';
 import GroupItem from './group-item';
 import useLocaleLabel from '../hooks/local-label';
 

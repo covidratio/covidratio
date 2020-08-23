@@ -1,10 +1,8 @@
-import useLocaleLabel from "../hooks/local-label";
-
-function GroupItem({ id, label }) {
+function GroupItem({ label }) {
   return (
-    <a href="#" className="list-group-item list-group-item-action">
+    <span className="list-group-item list-group-item-action">
       {label}
-    </a>
+    </span>
   );
 }
 

@@ -1,5 +1,5 @@
-const { useContext, useMemo } = require("react");
-const { default: AppContext } = require("../context/app");
+import { useContext, useMemo } from 'react';
+import AppContext from '../context/app';
 
 function useLocaleLabel(labels) {
   const [app] = useContext(AppContext);
@@ -9,7 +9,9 @@ function useLocaleLabel(labels) {
       return null;
     }
 
-    const labelMap = labels.reduce((map, { language, value }) => map.set(language, value), new Map());
+    const labelMap = labels.reduce((map, { language, value }) => (
+      map.set(language, value)
+    ), new Map());
 
     const language = app.languages.find((lang) => labelMap.has(lang));
 

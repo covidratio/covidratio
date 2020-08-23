@@ -1,5 +1,5 @@
-const { useContext, useMemo } = require("react");
-const { default: AppContext } = require("../context/app");
+import { useContext, useMemo } from 'react';
+import AppContext from '../context/app';
 
 function useLocalItems(items) {
   const [app] = useContext(AppContext);
@@ -11,7 +11,9 @@ function useLocalItems(items) {
 
     return items.map((item) => {
       const { labels } = item;
-      const labelMap = labels.reduce((map, { language, value }) => map.set(language, value), new Map());
+      const labelMap = labels.reduce((map, { language, value }) => (
+        map.set(language, value)
+      ), new Map());
       const language = app.languages.find((lang) => labelMap.has(lang));
 
       return {
