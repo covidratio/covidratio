@@ -8,17 +8,22 @@ const initialState = {
 };
 
 const MESSAGES_ADD = 'MESSAGES_ADD';
+const LOCALE_SET = 'LOCALE_SET';
 
 function reducer(state, action) {
   switch (action.type) {
     case MESSAGES_ADD:
       return {
         ...state,
-        locale: action.payload.locale,
         messages: {
           ...state.messages,
-          [action.payload.locale]: action.payload.messages,
+          ...action.payload,
         },
+      };
+    case LOCALE_SET:
+      return {
+        ...state,
+        locale: action.payload,
       };
     default:
       throw new Error('Invalid Action');
@@ -29,14 +34,22 @@ function CovidRatio({ Component, pageProps }) {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
-    import('../i18n/en.json').then(({ default: messages }) => {
-      dispatch({
-        type: MESSAGES_ADD,
-        payload: {
-          locale: 'en',
-          messages,
-        },
-      });
+    // eslint-disable-next-line no-undef
+    window.navigator.languages.forEach((lang) => {
+      import(`../i18n/${lang.toLowerCase()}.json`).then(({ default: messages }) => {
+        dispatch({
+          type: MESSAGES_ADD,
+          payload: {
+            en: messages,
+          },
+        });
+      }).catch((e) => { /* Silence is Golden */ });
+    });
+
+    dispatch({
+      type: LOCALE_SET,
+      // eslint-disable-next-line no-undef
+      payload: window.navigator.language,
     });
   }, []);
 
