@@ -1,5 +1,4 @@
-import Head from 'next/head';
-import { Message, BananaContext } from '@wikimedia/react.i18n';
+import { Message } from '@wikimedia/react.i18n';
 import Layout from '../components/layout';
 
 function Index() {

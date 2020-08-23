@@ -1,5 +1,5 @@
 import '../styles/globals.scss';
-import { useReducer, useLayoutEffect, useEffect } from 'react';
+import { useReducer, useEffect } from 'react';
 import { IntlProvider } from '@wikimedia/react.i18n';
 
 const initialState = {
@@ -43,7 +43,7 @@ function CovidRatio({ Component, pageProps }) {
             en: messages,
           },
         });
-      }).catch((e) => { /* Silence is Golden */ });
+      }).catch(() => { /* Silence is Golden */ });
     });
 
     dispatch({
