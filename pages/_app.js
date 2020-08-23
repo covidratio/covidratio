@@ -1,7 +1,10 @@
-import '../styles/globals.css'
+import '../styles/globals.css';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function CovidRatio({ Component, pageProps }) {
+  return (
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <Component {...pageProps} />
+  );
 }
 
-export default MyApp
+export default CovidRatio;
