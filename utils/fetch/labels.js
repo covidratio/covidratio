@@ -1,6 +1,6 @@
 import { from } from 'rxjs';
 import {
-  bufferCount, flatMap, toArray, map,
+  bufferCount, flatMap, reduce, map,
 } from 'rxjs/operators';
 import { fromFetch } from 'rxjs/fetch';
 import USER_AGENT from '../ua';
@@ -31,8 +31,10 @@ function fetchLabels(numericIds) {
         )),
       );
     }),
-    toArray(),
-    map((labels) => labels.flat()),
+    reduce((acc, labels) => ([
+      ...acc,
+      ...labels,
+    ]), []),
   );
 }
 

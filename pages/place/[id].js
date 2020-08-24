@@ -1,5 +1,5 @@
 import { from } from 'rxjs';
-import { flatMap, map, toArray } from 'rxjs/operators';
+import { flatMap, reduce } from 'rxjs/operators';
 import fetchContains from '../../utils/fetch/contains';
 import ADMINS from '../../utils/admins';
 import fetchLabels from '../../utils/fetch/labels';
@@ -40,8 +40,10 @@ export async function getStaticPaths() {
 
   const itemIds = await from(ids).pipe(
     flatMap((id) => fetchContains(id)),
-    toArray(),
-    map((contains) => contains.flat()),
+    reduce((acc, items) => ([
+      ...acc,
+      ...items,
+    ]), []),
   ).toPromise();
 
   return {
