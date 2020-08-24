@@ -1,5 +1,5 @@
 import { from, forkJoin } from 'rxjs';
-import { flatMap, map, reduce, toArray } from 'rxjs/operators';
+import { flatMap, map, toArray } from 'rxjs/operators';
 import Layout from '../components/layout';
 import Message from '../components/message';
 import Group from '../components/group';
@@ -11,7 +11,7 @@ function Index({ groups }) {
   return (
     <Layout title="title">
       <h1><Message id="title" /></h1>
-  <div className="list-group mb-3">
+      <div className="list-group mb-3">
         {groups.map(({ id, labels, items }) => (
           <Group key={id} labels={labels} items={items} />
         ))}
