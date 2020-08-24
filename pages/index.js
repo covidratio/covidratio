@@ -1,5 +1,5 @@
 import { from, forkJoin } from 'rxjs';
-import { flatMap, map, toArray } from 'rxjs/operators';
+import { flatMap, map, reduce } from 'rxjs/operators';
 import Layout from '../components/layout';
 import Message from '../components/message';
 import Group from '../components/group';
@@ -43,8 +43,10 @@ export async function getStaticProps() {
           })),
         )
       )),
-      toArray(),
-      map((items) => items.flat()),
+      reduce((acc, items) => ([
+        ...acc,
+        ...items,
+      ]), []),
     ),
   ]).toPromise();
 
