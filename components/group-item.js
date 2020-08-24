@@ -1,8 +1,12 @@
-function GroupItem({ label }) {
+import Link from 'next/link';
+
+function GroupItem({ id, label }) {
   return (
-    <span className="list-group-item list-group-item-action">
-      {label}
-    </span>
+    <Link href={`/place/${id}`}>
+      <a className="list-group-item list-group-item-action">
+        {label}
+      </a>
+    </Link>
   );
 }
 

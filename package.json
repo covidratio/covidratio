@@ -12,6 +12,7 @@
   "dependencies": {
     "@cinematix/reactor": "^2.0.0",
     "@wikimedia/react.i18n": "^2.0.2",
+    "abortcontroller-polyfill": "^1.5.0",
     "bootstrap": "^4.5.2",
     "next": "9.5.2",
     "react": "16.13.1",
