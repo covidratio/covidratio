@@ -7,7 +7,6 @@ import { IntlProvider } from '@wikimedia/react.i18n';
 import useReactor from '@cinematix/reactor';
 import AppContext from '../context/app';
 import messagesEn from '../i18n/en.json';
-import 'abortcontroller-polyfill/dist/polyfill-patch-fetch';
 import '../styles/globals.scss';
 
 const initialState = {

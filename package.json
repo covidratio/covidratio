@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "license": "AGPL-3.0-or-later",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "./bin/data.mjs && next dev",
+    "build": "./bin/data.mjs && next build",
     "start": "next start",
     "export": "next export -o ./html",
     "test": "eslint --ignore-path .gitignore ."
@@ -12,13 +12,14 @@
   "dependencies": {
     "@cinematix/reactor": "^2.0.0",
     "@wikimedia/react.i18n": "^2.0.2",
-    "abortcontroller-polyfill": "^1.5.0",
     "bootstrap": "^4.5.2",
     "next": "9.5.2",
+    "node-fetch": "^2.6.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "rxjs": "^6.6.2",
-    "sass": "^1.26.10"
+    "sass": "^1.26.10",
+    "slugify": "^1.4.5"
   },
   "devDependencies": {
     "eslint": "^7.2.0",
