@@ -1,0 +1,15 @@
+name: Purge Cloudflare Cache
+
+on: page_build
+
+jobs:
+  purge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Purge
+        run: >-
+          curl -f -X POST
+          --url https://api.cloudflare.com/client/v4/zones/9a6c6fd6b49f38234bc4f1301b67906e/purge_cache
+          --header 'Authorization: Bearer ${{ secrets.CF_API_TOKEN }}'
+          --header 'Content-Type: application/json'
+          --data '{"purge_everything":true}'
