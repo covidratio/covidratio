@@ -1,12 +1,12 @@
-name: Purge Cloudflare Cache
+name: Purge Cache
 
 on: page_build
 
 jobs:
-  purge:
+  cloudflare:
     runs-on: ubuntu-latest
     steps:
-      - name: Purge
+      - name: Purge Cloudflare Cache
         run: >-
           curl -f -X POST
           --url https://api.cloudflare.com/client/v4/zones/9a6c6fd6b49f38234bc4f1301b67906e/purge_cache
