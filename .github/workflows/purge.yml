@@ -1,6 +1,6 @@
 name: Purge Cloudflare Cache
 
-on: page_build
+on: deployment
 
 jobs:
   purge:
