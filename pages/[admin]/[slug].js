@@ -1,30 +1,25 @@
 import ADMINS from '../../utils/admins.mjs';
 import Layout from '../../components/layout';
 
-function Place({ name }) {
+function Place({ label }) {
   // @TODO Get the localized name?
   return (
     <Layout>
-      <h1>{name}</h1>
+      <h1>{label}</h1>
     </Layout>
   );
 }
 
 export async function getStaticProps({ params }) {
   const { places } = require('../../data/app.json');
-  const { admin: adminSlug, slug } = params;
+  const { slug } = params;
 
-  const { id, name } = places.find((p) => p.slug === slug);
-  const admin = ADMINS.find((a) => a.slug === adminSlug);
+  const { id, label } = places.find((place) => place.slug === slug);
 
   return {
     props: {
       id,
-      name,
-      admin: {
-        id: admin.id,
-        fips: admin.fips,
-      },
+      label,
     },
   };
 }

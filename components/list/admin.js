@@ -7,8 +7,8 @@ function Admin({ name, slug, places }) {
       <div className="list-group-item">
         <h4>{name}</h4>
       </div>
-      {places.map(({ id, slug: itemSlug, name: itemName }) => (
-        <Place key={id} admin={slug} slug={itemSlug} name={itemName} />
+      {places.map(({ id, slug: itemSlug, label: itemLabel }) => (
+        <Place key={id} admin={slug} slug={itemSlug} label={itemLabel} />
       ))}
     </>
   );

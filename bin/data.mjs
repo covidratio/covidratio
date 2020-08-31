@@ -120,6 +120,7 @@ function fetchNameSlug(numericIds) {
     flatMap(([labels, shortNames]) => (
       from(numericIds.map((id) => {
         let name;
+        let label;
 
         if (shortNames.has(id)) {
           const itemShortNames = shortNames.get(id);
@@ -128,16 +129,21 @@ function fetchNameSlug(numericIds) {
           }
         }
 
-        if (!name && labels.has(id)) {
+        if (labels.has(id)) {
           const itemLabels = labels.get(id);
           if (itemLabels.length > 0) {
-            name = itemLabels[0].value.replace(' County', '');
+            label = itemLabels[0].value;
+          }
+          label = itemLabels[0].value;
+          if (!name) {
+            name = label.replace(' County', '');
           }
         }
 
         return {
           id,
           name,
+          label,
           slug: slugify(name, {
             lower: true,
             strict: true,
@@ -155,10 +161,13 @@ async function main() {
     flatMap(({ id: adminId }) => (
       fetchContains(adminId).pipe(
         flatMap((ids) => fetchNameSlug(ids)),
-        map(({ id, name, slug }) => ({
+        map(({
+          id, name, label, slug,
+        }) => ({
           id,
           admin: adminId,
           name,
+          label,
           slug,
         })),
       )
