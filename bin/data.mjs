@@ -55,31 +55,32 @@ function fetchProperty(id, property) {
         }
 
         return 0;
-      }).map((claim) => (
-        claim?.mainsnak?.datavalue?.value
-      ))
+      }).map((claim) => {
+        const { datatype } = claim?.mainsnak || {};
+
+        switch (datatype) {
+          case 'wikibase-item':
+            return claim?.mainsnak?.datavalue?.value?.['numeric-id'];
+          case 'external-id':
+            return claim?.mainsnak?.datavalue?.value;
+          case 'monolingualtext':
+            return claim?.mainsnak?.datavalue?.value?.text;
+          default:
+            return claim?.mainsnak?.datavalue?.value;
+        }
+      }).filter((value) => !!value)
     )),
   );
 }
 
-function fetchContains(id) {
-  const property = 150; // contains administrative territorial entity
-
-  return fetchProperty(id, property).pipe(
-    map((values) => (
-      values.reduce((acc, value) => {
-        const numericId = value?.['numeric-id'];
-
-        if (!numericId) {
-          return acc;
-        }
-
-        return [
-          ...acc,
-          numericId,
-        ];
-      }, [])
+function fetchPropertyMultiple(ids, property) {
+  return from(ids).pipe(
+    flatMap((id) => (
+      fetchProperty(id, property).pipe(
+        map((values) => [id, values]),
+      )
     )),
+    reduce((acc, [key, value]) => acc.set(key, value), new Map()),
   );
 }
 
@@ -97,27 +98,29 @@ function fetchLabels(numericIds) {
   );
 }
 
-function fetchShortNames(numericIds) {
-  const property = 1813; // short name
+function getFirst(valueMap, key) {
+  if (!valueMap.has(key)) {
+    return undefined;
+  }
 
-  return from(numericIds).pipe(
-    flatMap((id) => (
-      fetchProperty(id, property).pipe(
-        map((shortNames) => (
-          [id, shortNames.map(({ text }) => text)]
-        )),
-      )
-    )),
-    reduce((acc, [key, value]) => acc.set(key, value), new Map()),
-  );
+  const values = valueMap.get(key);
+  if (values.length === 0) {
+    return undefined;
+  }
+
+  return values[0];
 }
 
-function fetchNameSlug(numericIds) {
+function fetchPlaces(numericIds) {
+  const shortNameId = 1813;
+  const fipsId = 882;
+
   return forkJoin([
     fetchLabels(numericIds),
-    fetchShortNames(numericIds),
+    fetchPropertyMultiple(numericIds, shortNameId),
+    fetchPropertyMultiple(numericIds, fipsId),
   ]).pipe(
-    flatMap(([labels, shortNames]) => (
+    flatMap(([labels, shortNames, fipsIds]) => (
       from(numericIds.map((id) => {
         let name;
         let label;
@@ -148,28 +151,59 @@ function fetchNameSlug(numericIds) {
             lower: true,
             strict: true,
           }),
+          fips: getFirst(fipsIds, id),
         };
       }))
     )),
   );
 }
 
+function fetchCensusPopulation(stateId) {
+  const url = new URL('https://api.census.gov/data/2019/pep/population');
+  url.searchParams.append('get', 'POP');
+  url.searchParams.append('for', 'county:*');
+  url.searchParams.append('in', `state:${stateId}`);
+
+  return defer(() => (
+    fetch(url, {
+      headers: {
+        'User-Agent': USER_AGENT,
+      },
+    })
+  )).pipe(
+    flatMap((response) => response.json()),
+    map((data) => data.reduce((acc, row, idx) => {
+      if (idx === 0) {
+        return acc;
+      }
+
+      const [population, state, county] = row;
+
+      return acc.set(state + county, parseInt(population, 10));
+    }, new Map())),
+  );
+}
+
 async function main() {
+  const containsId = 150; // contains administrative territorial entity
+
   // @TODO Run a search for the metropolatan areas:
   // haswbstatement:P31=Q1907114 haswbstatement:P131=Q812 then the "has part" I guess?
   const places = await from(ADMINS).pipe(
-    flatMap(({ id: adminId }) => (
-      fetchContains(adminId).pipe(
-        flatMap((ids) => fetchNameSlug(ids)),
-        map(({
-          id, name, label, slug,
-        }) => ({
-          id,
-          admin: adminId,
-          name,
-          label,
-          slug,
-        })),
+    flatMap(({ id: adminId, fips }) => (
+      forkJoin([
+        fetchProperty(adminId, containsId),
+        fetchCensusPopulation(fips),
+      ]).pipe(
+        flatMap(([placeIds, populations]) => (
+          fetchPlaces(placeIds).pipe(
+            map((place) => ({
+              ...place,
+              admin: adminId,
+              pop: populations.get(place.fips),
+            })),
+          )
+        )),
       )
     )),
     toArray(),
