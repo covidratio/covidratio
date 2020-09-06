@@ -1,3 +1,4 @@
 {
-  "title": "Title of the website"
+  "title": "Title of the website",
+  "result": "The result of the ratio calculation for a given locale.\nParameters:\n1. Ratio of people with COVID-19\n2. Location\n3. Date updated"
 }

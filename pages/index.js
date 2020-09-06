@@ -1,7 +1,7 @@
 import Layout from '../components/layout';
 import Message from '../components/message';
 import Admin from '../components/list/admin';
-import ADMINS from '../utils/admins.mjs';
+import ADMINS from '../utils/admins';
 
 function Index({ admins }) {
   // @TODO Get the localized name?

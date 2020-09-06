@@ -2,7 +2,7 @@ import {
   flatMap, reduce, map,
 } from 'rxjs/operators';
 import { fromFetch } from 'rxjs/fetch';
-import labelUrls from '../label-urls.mjs';
+import labelUrls from '../label-urls';
 
 function fetchLabels(numericIds, languages = ['en']) {
   return labelUrls(numericIds, languages).pipe(

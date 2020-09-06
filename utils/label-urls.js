@@ -1,9 +1,5 @@
-import rxjs from 'rxjs';
-// eslint-disable-next-line import/extensions
-import operators from 'rxjs/operators/index.js';
-
-const { from } = rxjs;
-const { map, bufferCount } = operators;
+const { from } = require('rxjs');
+const { map, bufferCount } = require('rxjs/operators');
 
 function labelUrls(numericIds, languages = ['en']) {
   return from(numericIds).pipe(
@@ -26,4 +22,4 @@ function labelUrls(numericIds, languages = ['en']) {
   );
 }
 
-export default labelUrls;
+module.exports = labelUrls;

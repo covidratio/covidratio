@@ -1,21 +1,17 @@
 #!/usr/bin/env node
 
-import fs from 'fs/promises';
-import path from 'path';
-import rxjs from 'rxjs';
-// eslint-disable-next-line import/extensions
-import operators from 'rxjs/operators/index.js';
-import fetch from 'node-fetch';
-import slugify from 'slugify';
-import ADMINS from '../utils/admins.mjs';
-import labelUrls from '../utils/label-urls.mjs';
+/* eslint-disable import/extensions */
 
-const { from, defer, forkJoin } = rxjs;
+const { writeFile, mkdir } = require('fs/promises');
+const { join } = require('path');
+const { from, defer, forkJoin } = require('rxjs');
 const {
   flatMap, map, toArray, reduce,
-} = operators;
-const { writeFile, mkdir } = fs;
-const { join } = path;
+} = require('rxjs/operators');
+const fetch = require('node-fetch');
+const slugify = require('slugify');
+const ADMINS = require('../utils/admins.js');
+const labelUrls = require('../utils/label-urls.js');
 
 const USER_AGENT = 'COVID Ratio/1.0.0 (https://covidratio.com/)';
 

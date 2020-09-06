@@ -2,7 +2,7 @@ import { Message as ReactMessage } from '@wikimedia/react.i18n';
 import { useContext, useMemo } from 'react';
 import AppContext from '../context/app';
 
-function Message({ id, params }) {
+function Message({ id, placeholders }) {
   const [app] = useContext(AppContext);
 
   return useMemo(() => {
@@ -11,12 +11,12 @@ function Message({ id, params }) {
     }
 
     return (
-      <ReactMessage id={id} params={params} />
+      <ReactMessage id={id} placeholders={placeholders} />
     );
   }, [
     app.languages,
     id,
-    params,
+    placeholders,
   ]);
 }
 

@@ -8,4 +8,4 @@ const ADMINS = [
   },
 ];
 
-export default ADMINS;
+module.exports = ADMINS;

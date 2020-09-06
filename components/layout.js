@@ -11,7 +11,7 @@ function Layout({ children }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
       </Head>
-      <div className="container">
+      <div className="container min-vh-100">
         {children}
       </div>
     </>

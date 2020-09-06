@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "license": "AGPL-3.0-or-later",
   "scripts": {
-    "dev": "./bin/data.mjs && next dev",
-    "build": "./bin/data.mjs && next build",
+    "dev": "./bin/data.js && next dev",
+    "build": "./bin/data.js && next build",
     "start": "next start",
     "export": "next export -o ./html",
     "test": "eslint --ignore-path .gitignore ."
@@ -13,6 +13,7 @@
     "@cinematix/reactor": "^2.0.0",
     "@wikimedia/react.i18n": "^2.0.2",
     "bootstrap": "^4.5.2",
+    "luxon": "^1.25.0",
     "next": "9.5.2",
     "node-fetch": "^2.6.0",
     "react": "16.13.1",
