@@ -59,7 +59,7 @@ function Place({
             }
 
             const end = DateTime.fromMillis(timestamp).endOf('day');
-            const start = end.minus({ days: 14 }).startOf('day');
+            const start = end.minus({ days: 13 }).startOf('day');
 
             const format = 'yyyy-MM-dd HH:mm:ss';
             const where = `County = '${county}' AND EventDate >= TIMESTAMP '${start.toFormat(format)}' AND EventDate <= TIMESTAMP '${end.toFormat(format)}'`;
