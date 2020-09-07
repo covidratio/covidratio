@@ -61,8 +61,6 @@ function Place({
     datetime = DateTime.fromISO(state.datetime).toLocaleString(DateTime.DATETIME_SHORT);
   }
 
-  const numCases = state.caseCount ? state.caseCount.toLocaleString() : null;
-
   // @TODO Get the localized name?
   return (
     <Layout>
@@ -106,7 +104,7 @@ function Place({
                 placeholders={[
                   <a href={authority.href}>{authority.name}</a>,
                   <a href="https://github.com/covidratio/covidratio"><Message id="source-code" /></a>,
-                  <a href="https://www.gnu.org/licenses/agpl-3.0.en.html"><Message id="license" placeholders={['AGPL-3']} /></a>
+                  <a href="https://www.gnu.org/licenses/agpl-3.0.en.html"><Message id="license" placeholders={['AGPL-3']} /></a>,
                 ]}
               />
             </p>
