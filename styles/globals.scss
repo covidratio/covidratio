@@ -17,6 +17,10 @@ body,
   min-height: 100vh;
 }
 
+body svg {
+  fill: currentColor;
+}
+
 .result {
   font-size: $font-size-base * 1.5;
 }

@@ -2,16 +2,17 @@ import Layout from '../components/layout';
 import Message from '../components/message';
 import Admin from '../components/list/admin';
 import ADMINS from '../utils/admins';
+import Header from '../components/header';
 
 function Index({ admins }) {
   // @TODO Get the localized name?
   return (
-    <Layout title="title">
+    <Layout>
+      <Header>
+        <Message id="title" />
+      </Header>
       <div className="row">
         <div className="col">
-          <header className="mt-2">
-            <h1><Message id="title" /></h1>
-          </header>
           <main>
             <div className="list-group mb-3">
               {admins.map(({

@@ -5,6 +5,7 @@ import useReactor from '@cinematix/reactor';
 import ADMINS from '../../utils/admins';
 import Layout from '../../components/layout';
 import Message from '../../components/message';
+import Header from '../../components/header';
 
 const CASE_COUNT = 'CASE_COUNT';
 
@@ -66,13 +67,11 @@ function Place({
     <Layout>
       <div className="row min-vh-100">
         <div className="col d-flex flex-column">
-          <header className="mt-2">
-            <h1>
-              {label}
-              <span> </span>
-              <span className="small">{adminLabel}</span>
-            </h1>
-          </header>
+          <Header>
+            {label}
+            <span> </span>
+            <span className="small">{adminLabel}</span>
+          </Header>
           <main className="d-flex flex-column justify-content-center flex-grow-1">
             <p className="result text-center">
               <Message
