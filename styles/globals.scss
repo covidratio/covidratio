@@ -3,6 +3,7 @@ Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
 $body-bg: #E4D6D3;
 $body-color: #311F1F;
+$primary: #975957;
 $list-group-bg: scale-color($body-bg, $lightness: 50%);
 $list-group-hover-bg: scale-color($list-group-bg, $lightness: 40%);
 
@@ -22,4 +23,8 @@ body,
 
 .ratio {
   font-size: $font-size-base * 7;
+}
+
+footer {
+  font-size: $small-font-size
 }

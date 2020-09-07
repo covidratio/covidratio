@@ -1,7 +1,4 @@
 #!/usr/bin/env node
-
-/* eslint-disable import/extensions */
-
 const { writeFile, mkdir } = require('fs/promises');
 const { join } = require('path');
 const { from, defer, forkJoin } = require('rxjs');

@@ -8,7 +8,8 @@
         "react/jsx-filename-extension": "off",
         "react/prop-types": "off",
         "global-require": "off",
-        "jsx-a11y/anchor-is-valid": "off"
+        "jsx-a11y/anchor-is-valid": "off",
+        "jsx-a11y/control-has-associated-label": "off"
     },
     "parserOptions": {
       "ecmaVersion": 11

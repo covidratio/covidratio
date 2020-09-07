@@ -7,13 +7,21 @@ function Index({ admins }) {
   // @TODO Get the localized name?
   return (
     <Layout title="title">
-      <h1 className="mt-2"><Message id="title" /></h1>
-      <div className="list-group mb-3">
-        {admins.map(({
-          id, name, slug, places,
-        }) => (
-          <Admin key={id} name={name} slug={slug} places={places} />
-        ))}
+      <div className="row">
+        <div className="col">
+          <header className="mt-2">
+            <h1><Message id="title" /></h1>
+          </header>
+          <main>
+            <div className="list-group mb-3">
+              {admins.map(({
+                id, name, slug, places,
+              }) => (
+                <Admin key={id} name={name} slug={slug} places={places} />
+              ))}
+            </div>
+          </main>
+        </div>
       </div>
     </Layout>
   );

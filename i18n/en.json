@@ -1,4 +1,9 @@
 {
   "title": "COVID Ratio",
-  "result": "Approximately 1 in $1 people in $2 have COVID-19 as of $3"
+  "result": "Approximately 1 in $1 people in $2 have COVID-19 as of $3",
+  "explanation": "Ratio is calculated by taking the total population of $1 ($2) and dividing it by the number of confirmed cases in $1 reported over the previous 14 days ($3). $4 has published a $5 explaining how to calculate the ratio yourself.",
+  "video": "video",
+  "source": "Data is provided by $1. The $2 is available for any use without permission under the terms of the $3.",
+  "source-code": "source code",
+  "license": "$1 license"
 }
