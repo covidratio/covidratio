@@ -7,7 +7,7 @@ const {
 } = require('rxjs/operators');
 const fetch = require('node-fetch');
 const slugify = require('slugify');
-const ADMINS = require('../utils/admins.js');
+const ADMINS = require('../utils/admins/index.js');
 const labelUrls = require('../utils/label-urls.js');
 
 const USER_AGENT = 'COVID Ratio/1.0.0 (https://covidratio.com/)';
