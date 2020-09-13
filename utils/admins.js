@@ -20,6 +20,7 @@ const ADMINS = [
       url.searchParams.append('outFields', 'EventDate');
       url.searchParams.append('f', 'json');
       url.searchParams.append('orderByFields', 'EventDate DESC');
+      url.searchParams.append('resultRecordCount', 1);
 
       return fromFetch(url).pipe(
         flatMap((response) => response.json()),
