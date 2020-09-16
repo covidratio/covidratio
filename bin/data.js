@@ -21,7 +21,7 @@ function fetchProperty(id, property) {
   url.searchParams.append('formatversion', 2);
   url.searchParams.append('props', '');
   url.searchParams.append('entity', entityId);
-  url.searchParams.append('property', propertyId); // contains administrative territorial entity
+  url.searchParams.append('property', propertyId);
 
   return defer(() => (
     fetch(url, {

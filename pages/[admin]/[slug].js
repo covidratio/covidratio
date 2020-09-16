@@ -77,7 +77,7 @@ function Place({
               <Message
                 id="result"
                 placeholders={[
-                  <span className="d-block"><strong className="ratio">{ratio}</strong></span>,
+                  <span className="d-block"><strong className="ratio">{ratio || '\u00A0'}</strong></span>,
                   <em>{label}</em>,
                   <strong>{datetime}</strong>,
                 ]}
@@ -92,7 +92,7 @@ function Place({
                   <em>{label}</em>,
                   pop.toLocaleString(),
                   state.caseCount ? state.caseCount.toLocaleString() : null,
-                  <a href="https://www.wikidata.org/wiki/Q93050329">Nathan Smith</a>,
+                  <a href="https://www.wikidata.org/wiki/Q93050329">Nathan D L Smith ALM</a>,
                   <a href="https://www.instagram.com/p/CEDPeb6Dod2/"><Message id="video" /></a>,
                 ]}
               />
