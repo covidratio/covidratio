@@ -2,6 +2,7 @@
   "name": "covidratio.com",
   "version": "0.1.0",
   "license": "AGPL-3.0-or-later",
+  "main": "index.js",
   "scripts": {
     "dev": "./bin/data.js && next dev",
     "build": "./bin/data.js && next build",

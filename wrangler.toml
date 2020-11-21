@@ -1,7 +1,7 @@
 name = "covidratio"
 type = "webpack"
 account_id = "2659099e440328a773821e7db5363a84"
-zone_id = "ed5594d679827145d1d47a063b123a22"
+zone_id = "9a6c6fd6b49f38234bc4f1301b67906e"
 route = "covidratio.com/*"
 
 [site]
