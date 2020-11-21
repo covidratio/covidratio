@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@cinematix/reactor": "^2.0.0",
+    "@cloudflare/kv-asset-handler": "0.0.12",
     "@wikimedia/react.i18n": "^2.0.2",
     "bootstrap": "^4.5.2",
     "luxon": "^1.25.0",
@@ -23,6 +24,7 @@
     "slugify": "^1.4.5"
   },
   "devDependencies": {
+    "@cloudflare/wrangler": "^1.12.2",
     "eslint": "^7.2.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-plugin-import": "^2.22.0",
