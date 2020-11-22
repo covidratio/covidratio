@@ -5,7 +5,6 @@ import messagesEn from '../i18n/en.json';
 import '../styles/globals.scss';
 
 async function languageLoader(lang) {
-  console.log(`Loading ${lang}`);
   const { default: messages } = await import(`../i18n/${lang}.json`);
   return messages;
 }
