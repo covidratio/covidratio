@@ -1,11 +1,11 @@
 import { useContext, useMemo } from 'react';
-import AppContext from '../context/app';
+import LanguageContext from '../context/language';
 
 function useLocalItems(items) {
-  const [app] = useContext(AppContext);
+  const languages = useContext(LanguageContext);
 
   return useMemo(() => {
-    if (app.languages.length === 0) {
+    if (languages.length === 0) {
       return [];
     }
 
@@ -14,7 +14,7 @@ function useLocalItems(items) {
       const labelMap = labels.reduce((map, { language, value }) => (
         map.set(language, value)
       ), new Map());
-      const language = app.languages.find((lang) => labelMap.has(lang));
+      const language = languages.find((lang) => labelMap.has(lang));
 
       return {
         ...item,
@@ -22,7 +22,7 @@ function useLocalItems(items) {
       };
     }).sort((a, b) => a.label.localeCompare(b.label));
   }, [
-    app.languages,
+    languages,
     items,
   ]);
 }

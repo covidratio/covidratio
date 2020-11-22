@@ -1,5 +1,5 @@
+import { Message } from '@wikimedia/react.i18n';
 import Layout from '../components/layout';
-import Message from '../components/message';
 import Admin from '../components/list/admin';
 import ADMINS from '../utils/admins';
 import Header from '../components/header';

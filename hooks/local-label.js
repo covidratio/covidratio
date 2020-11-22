@@ -1,11 +1,11 @@
 import { useContext, useMemo } from 'react';
-import AppContext from '../context/app';
+import LanguageContext from '../context/language';
 
 function useLocaleLabel(labels) {
-  const [app] = useContext(AppContext);
+  const languages = useContext(LanguageContext);
 
   return useMemo(() => {
-    if (app.languages.length === 0) {
+    if (languages.length === 0) {
       return null;
     }
 
@@ -13,11 +13,11 @@ function useLocaleLabel(labels) {
       map.set(language, value)
     ), new Map());
 
-    const language = app.languages.find((lang) => labelMap.has(lang));
+    const language = languages.find((lang) => labelMap.has(lang));
 
     return language ? labelMap.get(language) : null;
   }, [
-    app.languages,
+    languages,
     labels,
   ]);
 }

@@ -1,10 +1,10 @@
 import { useReducer, useMemo } from 'react';
 import { DateTime } from 'luxon';
 import { filter, map, switchMap } from 'rxjs/operators';
+import { Message } from '@wikimedia/react.i18n';
 import useReactor from '@cinematix/reactor';
 import ADMINS from '../../utils/admins';
 import Layout from '../../components/layout';
-import Message from '../../components/message';
 import Header from '../../components/header';
 
 const CASE_COUNT = 'CASE_COUNT';
