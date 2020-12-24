@@ -1,9 +1,9 @@
 {
   "title": "Title of the website",
-  "result": "The result of the ratio calculation for a given locale.\nParameters:\n1. Ratio of people with COVID-19\n2. Location\n3. Date updated",
-  "explanation": "Explanation of how ratio is calculated. Displayed in the footer of a place.\nParameters:\n1. Place name\n2. Population of place\n3. Number of cases in place.\n4. Name of person who published video\n5. {{msg-wm|covidratio-video}}",
+  "result": "The result of the ratio calculation for a given locale.\nParameters:\n* $1 - Ratio of people with COVID-19\n* $2 - Location\n* $3 - Date updated",
+  "explanation": "Explanation of how ratio is calculated. Displayed in the footer of a place.\nParameters:\n* $1 - Place name\n* $2 - Population of place\n* $3 - Number of cases in place.\n* $4 - Name of person who published video\n* $5 - {{msg-mw|covidratio-video}}",
   "video": "Word to describe an online video.",
-  "source": "Data source and code source statement. Displayed in the footer of a place.\nParameters:\n1. Name of the source of the data.\n2. {{msg-wm|covidratio-source-code}}\n3. {{msg-wm|covidratio-license}}",
+  "source": "Data source and code source statement. Displayed in the footer of a place.\nParameters:\n* $1 - Name of the source of the data.\n* $2 - {{msg-wm|covidratio-source-code}}\n* $3 - {{msg-mw|covidratio-license}}",
   "source-code": "Phrase to describe the code of software",
-  "license": "Phrase to describe a type of software license.\nParameters:\n1. SPDX License Code"
+  "license": "Phrase to describe a type of software license.\nParameters:\n* $1 - SPDX License Code"
 }
