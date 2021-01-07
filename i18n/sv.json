@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sabelöga"
+		]
+	},
+	"title": "COVID Ratio",
+	"result": "Ungefär 1 av $1 människor i $2 har COVID-19 sen $3",
+	"explanation": "Förhållandet beräknas genom att ta den sammanlagda befolkningen i $1 ($2) och dela det med antalet bekräftade fall i $1 som rapporterats över de senaste 14 dagarna ($3). $4 har publicerat en $5 som förklarar hur man kan beräkna förhållandet själv.",
+	"video": "video",
+	"source": "Datan samlas in av $1. $2 får användas utan tillstånd under villkoren i $3.",
+	"source-code": "källkod",
+	"license": "$1-licens"
+}

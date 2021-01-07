@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Thibaut120094",
+			"Verdy p"
+		]
+	},
+	"title": "COVID Ratio",
+	"result": "Environ 1 personne sur $1 en $2 ont contracté la covid-19 le $3",
+	"explanation": "Le ratio est calculé en prenant la population totale de $1 ($2) et la divisant par le nombre de cas confirmés en $1 durant les 14 derniers jours ($3). $4 a publié une $5 expliquant comment calculer le ratio vous-même.",
+	"video": "vidéo",
+	"source": "Les données sont fournies par ''$1''. Le $2 est disponible pour une utilisation quelconque sans permission suivant les conditions de la $3.",
+	"source-code": "code source",
+	"license": "licence « $1 »"
+}
