@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Borichèt"
+		]
+	},
+	"title": "Rapòrt COVID",
+	"result": "Anviron 1 përson-a su $1 an $2 a l'han ciapà la COVID-19 al $3",
+	"explanation": "Ël rapòrt a l'é calcolà an pijand la popolassion total ëd $1 ($2) e dividend-la për ël nùmer ëd cas confirmà an $1 durant j'ùltim 14 di ($3). $4 a l'ha publicà un $5 ch'a spiega coma a peul calcolesse ës rapòrt daspërchiel.",
+	"video": "filmà",
+	"source": "Ij dàit a son fornì da $1. Ël $2 a l'é disponìbil për tut usagi sensa damanca ëd përmess sota le condission ëd la $3.",
+	"source-code": "còdes sorgiss",
+	"license": "licensa «$1»"
+}

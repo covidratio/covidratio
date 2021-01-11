@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"DraconicDark"
+		]
+	},
+	"title": "COVID-Verhältnis",
+	"result": "Ungefähr 1 von $1 Menschen in $2 hat COVID-19 ab $3",
+	"explanation": "Das Verhältnis wird berechnet, indem man die Gesamtbevölkerung von $1 ($2) nimmt und sie durch die Anzahl der bestätigten Fälle in $1, die in den letzten 14 Tagen gemeldet wurden ($3), dividiert. $4 hat einen $5 veröffentlicht, der erklärt, wie Sie das Verhältnis selbst berechnen können.",
+	"video": "Video",
+	"source": "Die Daten werden von $1 zur Verfügung gestellt. Der $2 kann ohne Genehmigung unter den Bedingungen von $3 verwendet werden.",
+	"source-code": "Quellcode",
+	"license": "$1-Lizenz"
+}

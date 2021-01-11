@@ -1,12 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Bikarhêner"
+			"Bikarhêner",
+			"Guherto"
 		]
 	},
 	"title": "Rêjeya COVIDê",
 	"result": "Teqrîben 1 ji $1 însanên li $2 bi COVID-19ê ketine di $3 de",
-	"explanation": "Rêje bi girtina tevahiya nifûsa $1 ($2) û wê parkirina bi nimreya waqeyên tesdîqkirî yê li $1 di 14 rojên dawî de ($3) raporkirî hatiye hesabkirin. $4 vîdeoyeke $5 belav kirine ku hûn çawa dikarin vê rêjeyê bixwe hesab bikin.",
+	"explanation": "Rêje bi girtina tevahiya nifûsa $1 ($2) û wê parkirina bi nimreya waqeyên tesdîqkirî yê li $1 di 14 rojên dawî de ($3) raporkirî hatiye hesabkirin. $4 vîdyoyeke $5 belav kirine ku hûn çawa dikarin vê rêjeyê bixwe hesab bikin.",
 	"video": "vîdeo",
 	"source": "Dane ji aliyê $1 ve hate pêşkêşkirin. $2 li bin şertûmercên $3 ji bo her awa bikaranînê bêyî-destûrxwastinê berdest e.",
 	"source-code": "koda çavkaniyê",
