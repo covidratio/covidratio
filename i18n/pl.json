@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Woytecr"
+		]
+	},
+	"title": "Wskaźnik zachorowań na COVID",
+	"result": "Około 1 na $1 osób w $2 ma COVID-19 na dzień $3",
+	"explanation": "Wskaźnik obliczany jest przez wzięcie liczby ludności $1 ($2) i podzielenie jej przez liczbę potwierdzonych w $1 przypadków w ciągu ostatnich 14 dni ($3). $4 opublikował $5 objaśniające jak samodzielnie obliczyć wskaxnik zachorowań.",
+	"video": "wideo",
+	"source": "Dane dostarczane przez $1. Dostępny jest $2, który można dowolnie wykorzystywać bez potrzeby uzyskania pozwolenia, $1.",
+	"source-code": "kod źródłowy",
+	"license": "na licencji $1"
+}
