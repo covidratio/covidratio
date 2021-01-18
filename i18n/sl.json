@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eleassar"
+		]
+	},
+	"title": "COVID Ratio",
+	"result": "Dne $3 ima covid-19 v $2 približno 1 od $1 oseb",
+	"explanation": "Razmerje se izračunava tako, da se celotno število $1 ($2) deli s številom potrjenih primerov v $1, o katerih so poročali v minulih 14 dnevih ($3). $4 je objavil videoposnetek $5, v katerem je razloženo, kako razmerje izračunate sami.",
+	"video": "video",
+	"source": "Podatke zagotavlja $1. $2 je na voljo za kakršno koli uporabo v skladu s pogoji licence $3.",
+	"source-code": "izvorna koda",
+	"license": "Licenca $1"
+}

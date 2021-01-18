@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"title": "COVID Ratio",
+	"result": "Cchiù o mene 1 jndr'à $1 crestiàne jndr'à $2 onne 'u COVID-19 cumme $3",
+	"explanation": "'A percenduale jè calcolate pigghianne 'a popolazizone totale de $1 ($2) e dividennele pe numere de case confermate jndr'à $1 segnalate sus a le 14 sciurne ($3). $4 ave pubblecate 'nu $5 ca spieghe cumme calcolà 'a percenduale da sule.",
+	"video": "video",
+	"source": "Le date sò date da $1. 'U $2 jè disponibbele pe ogne ause senze permesse sotte a le termine d'a $3.",
+	"source-code": "codece sorgende",
+	"license": "$1 licenze"
+}

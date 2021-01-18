@@ -1,14 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
+			"Hedda",
 			"MuratTheTurkish"
 		]
 	},
 	"title": "COVID Oranı",
-	"result": "$2 ülkesindeki $1 kişiden yaklaşık 1'inde $3 tarihinden itibaren COVID-19 var",
-	"explanation": "Oran, $1 ($2) olan toplam nüfus alınarak ve bunun önceki 14 günde ($3) rapor edilen $1 cinsinden doğrulanmış vaka sayısına bölünmesiyle hesaplanır. $4, oranı kendiniz nasıl hesaplayacağınızı açıklayan bir $5 yayımladı.",
+	"result": "$3 itibariyle $2 bölgesinde her $1 kişiden 1'inde COVID-19 var.",
+	"explanation": "Oran, toplam $1 ($2) nüfusu alınarak ve son 14 günde ($3), bu bölgede bildirilen teyit edilmiş vaka sayısına bölünerek hesaplanır. $4, oranı kendiniz nasıl hesaplayacağınızı açıklayan bir $5 yayımladı.",
 	"video": "video",
-	"source": "Veriler $1 tarafından sağlanmaktadır. $2, $3 koşulları altında izinsiz herhangi bir kullanım için mevcuttur.",
-	"source-code": "Kaynak kodu",
+	"source": "Veriler $1 tarafından sağlanmaktadır. $2, $3 hükümleri altında izinsiz herhangi bir şekilde kullanılabilir.",
+	"source-code": "kaynak kodu",
 	"license": "$1 lisansı"
 }
