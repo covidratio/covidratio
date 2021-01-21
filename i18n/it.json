@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"EditGio"
+		]
+	},
+	"video": "video",
+	"source-code": "codice sorgente",
+	"license": "licenza $1"
+}

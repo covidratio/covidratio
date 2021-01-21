@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jesusmc"
+		]
+	},
+	"title": "Proporción de COVID",
+	"result": "Aproximadamente 1 de cada $1 personas en $2 tienen COVID-19 a partir de $3",
+	"explanation": "La proporción se calcula tomando la población total de $1 ($2) y dividiéndola por el número de casos confirmados en $1 informado durante los 14 días anteriores ($3). $4 ha publicado un $5 que explica cómo calcular la proporción usted mismo.",
+	"video": "vídeo",
+	"source": "Los datos son proporcionados por $1. El $2 está disponible para cualquier uso sin permiso bajo los términos del $3.",
+	"source-code": "código fuente",
+	"license": "$1 licencia"
+}

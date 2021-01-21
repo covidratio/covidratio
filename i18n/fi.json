@@ -4,8 +4,9 @@
 			"Moj"
 		]
 	},
+	"title": "COVID-suhdeluku (COVID Ratio)",
 	"result": "Suunnilleen yhdellä $1 ihmisestä alueella $2 on COVID-19 ajankohtana $3.",
-	"explanation": "Suhdeluku on laskettu ottamalla alueen $1 kokonaisväkiluku ($2) ja jalamalla se 14 edellisen päivän varmistettujen tapausten määrällä ($3) alueella $1. $4 on julkaissut $5n, jossa selitetään miten voit laskea suhdeluvun itse.",
+	"explanation": "Suhdeluku on laskettu ottamalla alueen $1 kokonaisväkiluku ($2) ja jakamalla se 14 edellisen päivän varmistettujen tapausten määrällä ($3) alueella $1. $4 on julkaissut $5n, jossa selitetään miten voit laskea suhdeluvun itse.",
 	"video": "video",
 	"source": "Tiedot tarjoaa $1. The $2 is available for any use without permission under the terms of the $3.",
 	"source-code": "lähdekoodi",
