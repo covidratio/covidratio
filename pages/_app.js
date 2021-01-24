@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { IntlProvider } from '@wikimedia/react.i18n';
 import useLanguageLoader from '@chickaree/language-loader';
 import LanguageContext from '../context/language';
@@ -25,12 +26,17 @@ function CovidRatio({ Component, pageProps }) {
   ] = useLanguageLoader(languageLoader, initialLanguages, initialMessages);
 
   return (
-    <IntlProvider locale={locale} messages={messages}>
-      <LanguageContext.Provider value={languages}>
-        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-        <Component {...pageProps} />
-      </LanguageContext.Provider>
-    </IntlProvider>
+    <>
+      <Head>
+        <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "e7a034680a204f7fa0404e48f8f64578"}' />
+      </Head>
+      <IntlProvider locale={locale} messages={messages}>
+        <LanguageContext.Provider value={languages}>
+          {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+          <Component {...pageProps} />
+        </LanguageContext.Provider>
+      </IntlProvider>
+    </>
   );
 }
 
