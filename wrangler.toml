@@ -1,7 +1,0 @@
-name = "covidratio"
-type = "webpack"
-route = "covidratio.com/*"
-
-[site]
-bucket = "./html"
-entry-point = ""

@@ -5,14 +5,12 @@
   "main": "index.js",
   "scripts": {
     "dev": "./bin/data.js && next dev",
-    "build": "./bin/data.js && next build",
+    "build": "./bin/data.js && next build && next export -o ./html",
     "start": "next start",
-    "export": "next export -o ./html",
     "test": "eslint --ignore-path .gitignore ."
   },
   "dependencies": {
     "@chickaree/language-loader": "^1.0.2",
-    "@cinematix/next-cloudflare": "^1.1.3",
     "@cinematix/reactor": "^2.0.0",
     "@wikimedia/react.i18n": "^2.0.2",
     "bootstrap": "^4.5.2",
@@ -26,7 +24,6 @@
     "slugify": "^1.4.5"
   },
   "devDependencies": {
-    "@cloudflare/wrangler": "^1.12.2",
     "eslint": "^7.2.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-plugin-import": "^2.22.0",
