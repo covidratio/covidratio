@@ -4,6 +4,11 @@
 			"Tofeiku"
 		]
 	},
+	"title": "Nisbah COVID",
+	"result": "Kira-kira 1 dalam $1 orang di $2 mempunyau COVID-19 setakat $3",
+	"explanation": "Nisbah dikira dengan mengambil jumlah penduduk $1 ($2) dan membahagikannya dengan bilangan kes yang disahkan di $1 dilaporkan sepanjang 14 hari yang lalu ($3). $4 telah menerbit $5 menjelaskan cara mengira nisbah sendiri.",
 	"video": "video",
-	"source-code": "kod sumber"
+	"source": "Data disediakan oleh $1. $2 sedia ada untuk sebarang kegunaan tanpa kebenaran di bawah terma $3.",
+	"source-code": "kod sumber",
+	"license": "Lesen $1"
 }
