@@ -1,12 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Fúlvio"
+			"Fúlvio",
+			"Hamilton Abreu"
 		]
 	},
-	"title": "Proporção da COVID",
-	"result": "Aproximadamente 1 em $1 pessoas em $2 tem COVID-19 em $3",
-	"explanation": "A proporção é calculada tomando a população total de $1 ($2) e dividindo-a pelo número de casos confirmados em $1 reportados nos 14 dias anteriores ($3). $4 publicou um $5 explicando como calcular a proporção a si mesmo.",
+	"title": "Proporção da Covid",
+	"result": "Aproximadamente 1 em $1 pessoas em $2 tem Covid-19 em $3",
+	"explanation": "A proporção é calculada dividindo a população total de $1 ($2) pelo número de casos confirmados em $1 reportados nos 14 dias anteriores ($3). $4 publicou um $5 explicando como pode calcular a proporção por si próprio.",
 	"video": "vídeo",
 	"source": "Os dados são fornecidos por $1. O $2 está disponível para qualquer uso sem permissão sob os termos da $3.",
 	"source-code": "código-fonte",
