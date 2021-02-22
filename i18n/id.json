@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Andikbuyung"
+		]
+	},
+	"title": "Rasio COVID",
+	"result": "Kira-kita 1 dari $1 penduduk di $2 terkena $3 pada $3",
+	"explanation": "Rasio dihitung dengan rumus jumlah penduduk $1($2) dibagi jumlah kasus terkonfirmasi di $1 yang dilaporkan 14 hari sebelumnya ($3). $4 telah menerbitkan $5 yang menjelaskan bagaiamana cara untuk menghitung rasio secara mandiri.",
+	"video": "video",
+	"source": "Data disediakan oleh $1. $2 boleh digunakan tanpa izin dari ketentuan $3.",
+	"source-code": "kode sumber",
+	"license": "Lisensi $1"
+}
