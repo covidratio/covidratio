@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jaroslav.micek"
+		]
+	},
+	"title": "COVID Ratio",
+	"result": "Približne 1 z $1 ľudí v lokácii $2 má COVID-19, aktualizované $3",
+	"explanation": "Podiel pozitívnych je vypočítaný tak, že celková populácia $1 ($2) je vydelená množstvom potvrdených prípadov v $1 nahlásenom za posledných 14 dní ($3). $4 publikoval/a video $5 s vysvetlením ako vypočítať podiel.",
+	"video": "video",
+	"source": "Dáta poskytol $1. $2 je dostupný na použitie bez povolenia na základe podmienok uvedených tu $3.",
+	"source-code": "zdrojový kód",
+	"license": "$1 licencia"
+}
