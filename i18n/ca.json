@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mguix"
+		]
+	},
+	"title": "Ràtio de la COVID",
+	"result": "Aproximadament 1 de cada $1 persones a $2 té COVID-19 a partir de $3",
+	"explanation": "La ràtio es calcula prenent la població total de $1 ($2) i dividint pel nombre de casos confirmats a $1 informat durant els 14 dies anteriors ($3). $4 ha publicat un $5 que explica com calcular la proporció vostè mateix.",
+	"video": "vídeo",
+	"source": "Les dades són proporcionades per $1. El $2 està disponible per qualsevol ús sense permís sota els termes de $3.",
+	"source-code": "codi font",
+	"license": "Llicència $1"
+}
