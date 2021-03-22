@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Georg101"
+		]
+	},
+	"title": "Podíl nakažených COVID",
+	"result": "Přibližně 1 z $1 lidí v lokalitě $2 má COVID-19, aktualizované $3",
+	"explanation": "Podíl pozitivních je vypočítaný tak, že celková populace $1 ($2) je vydělená množstvím potvrzených případů v $1 nahlášených za posledních 14 dní ($3). $4 publikoval/a video $5 s vysvětlením jak vypočítat podíl.",
+	"video": "Video",
+	"source": "Data poskytl $1. $2 je dostupný na použití bez povolení na základě podmínek uvedených na $3.",
+	"source-code": "Zdrojový kód",
+	"license": "licence $1"
+}
