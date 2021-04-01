@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"ObaTango"
+		]
+	},
+	"title": "Proporshon di COVID",
+	"result": "Mas o ménos 1 den $1 hende na $2 tin COVID-19 $3",
+	"explanation": "Pa kalkulá proporshon ta kue e poblashon total di $1 ($2) i ta dividié ku e kantidat di kaso konfirmá na $1 segun raportage di e 14 dianan anterior ($3). $4 a publiká un $5 ku ta splika kon bo mes por kalkulá e proporshon.",
+	"video": "video",
+	"source": "Dato ta di $1. E $2 ta disponibel pa uzo sinpèrmit segun término di e $3.",
+	"source-code": "kódigo fuente",
+	"license": "lisensia $1"
+}
