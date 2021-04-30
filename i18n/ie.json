@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Renan"
+		]
+	},
+	"title": "Proportion de COVID",
+	"result": "Circa de 1 in $1 gente in $2 have COVID-19 in date de $3",
+	"explanation": "Li proportion es calculat exigent li númere total de population del $1 ($2) e divident it per li númere de casus confirmat in $1 relatet circa li 14 dies ($3). $4 ha publicat un $5 explicant qualmen calcular li proportion vu self.",
+	"video": "video",
+	"source": "Li detallies es providet per $1. Li $2 es disponibil por qualcunc usu sin permission sub li conditiones del $3.",
+	"source-code": "Code fonte",
+	"license": "Autorisation $1"
+}
