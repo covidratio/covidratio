@@ -4,7 +4,7 @@ const { fromFetch } = require('rxjs/fetch');
 const { DateTime } = require('luxon');
 
 function caseCount(countyName) {
-  const url = new URL('https://services1.arcgis.com/CY1LXxl9zlJeBuRZ/arcgis/rest/services/Case_Data_2021/FeatureServer/0/query');
+  const url = new URL('https://services1.arcgis.com/CY1LXxl9zlJeBuRZ/arcgis/rest/services/Florida_COVID19_Case_Line_Data_2021/FeatureServer/0/query');
   url.searchParams.append('where', '1=1');
   url.searchParams.append('outFields', 'EventDate');
   url.searchParams.append('f', 'json');
@@ -26,7 +26,7 @@ function caseCount(countyName) {
       const format = 'yyyy-MM-dd HH:mm:ss';
       const where = `County = '${countyName}' AND EventDate >= TIMESTAMP '${start.toFormat(format)}' AND EventDate <= TIMESTAMP '${end.toFormat(format)}'`;
 
-      const queryUrl = new URL('https://services1.arcgis.com/CY1LXxl9zlJeBuRZ/arcgis/rest/services/Case_Data_2021/FeatureServer/0/query');
+      const queryUrl = new URL('https://services1.arcgis.com/CY1LXxl9zlJeBuRZ/arcgis/rest/services/Florida_COVID19_Case_Line_Data_2021/FeatureServer/0/query');
       queryUrl.searchParams.append('where', where);
       queryUrl.searchParams.append('returnCountOnly', 'true');
       queryUrl.searchParams.append('f', 'json');
