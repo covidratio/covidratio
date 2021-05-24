@@ -1,14 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Bas dehaan"
+			"Bas dehaan",
+			"McDutchie"
 		]
 	},
 	"title": "COVID Ratio",
 	"result": "Ongeveer 1 op de $1 mensen in $2 hebben COVID-19 op $3",
-	"explanation": "Ratio is berekend door de totale populatie van $1 ($2) te delen door het totaal aantal bevestigde besmettingen in $1 over de laatste 14 dagen ($3). $4 heeft een $5 gemaakt waarin wordt uitgelegd hoe je zelf deze ratio kan berekenen.",
+	"explanation": "De verhouding wordt berekend door de totale bevolking van $1 ($2) te delen door het totaal aantal bevestigde besmettingen in $1 over de laatste 14 dagen ($3). $4 heeft een $5 gemaakt waarin wordt uitgelegd hoe je zelf deze verhouding kan berekenen.",
 	"video": "video",
-	"source": "Datta wordt geleverd door $1. De $2 is beschikbaar voor ieder gebruik zonder voorafgaande toestemming onder de voorwaarden van $3.",
+	"source": "De gegevens zijn geleverd door $1. De $2 is beschikbaar voor ieder gebruik zonder voorafgaande toestemming onder de voorwaarden van de $3.",
 	"source-code": "broncode",
-	"license": "$1 licentie"
+	"license": "$1-licentie"
 }
