@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kingu"
+		]
+	},
+	"title": "COVID-smitteandel",
+	"result": "Omtrent én av $1 i $2 har COVID-19 per $3",
+	"explanation": "Forholdet regnes ut ved total befolkning på $1 ($2) delt på antallet bekreftede tilfeller i $1, innrapportert de siste 14 dagene ($3). $4 har publisert $5 som forklarer hvordan du regner ut smitteandelen selv.",
+	"video": "video",
+	"source": "Data på vegne av $1. $2 er tilgjengelig for  all bruk uten tillatelse, i henhold til vilkårene i $3.",
+	"source-code": "kildekode",
+	"license": "$1-lisens"
+}
