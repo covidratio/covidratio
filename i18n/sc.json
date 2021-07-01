@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"L2212"
+		]
+	},
+	"title": "Proportzione de su COVID",
+	"result": "Pagu prus o mancu 1 in $1 persones in $2 ant pigadu su COVID-19 in su $3",
+	"explanation": "Sa proportzione benit carculada pighende totu sa populatzione de $1($2) e dividende·la pro su nùmeru de casos cunfirmados in $1 durante sas 14 dies antepostas ($3). $4 at publicadu unu $5 chi acrarit comente podes carculare sa proportzione a sa sola.",
+	"video": "vìdeu",
+	"source": "Sos datos los at frunidos $1. Su $2 est a disponimentu pro cale si siat impreu chene bisòngiu de permissu in sita de sos tèrmines de sa $3.",
+	"source-code": "còdighe de oerìgine",
+	"license": "litzèntzia $1"
+}
