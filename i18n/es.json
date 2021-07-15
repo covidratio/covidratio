@@ -2,10 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Fitoschido",
+			"Jack30",
 			"MarleneR329"
 		]
 	},
 	"title": "Proporción de COVID",
+	"result": "aproximadamente 1 de $1 personas en $2 tienen COVID-19 para $3",
 	"video": "vídeo",
 	"source-code": "código fuente"
 }
