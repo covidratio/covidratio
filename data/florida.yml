@@ -35,7 +35,7 @@ places:
     cases: []
   charlotte:
     label: Charlotte County
-    population: 18_8910
+    population: 188_910
     cases: []
   citrus:
     label: Citrus County
@@ -167,7 +167,7 @@ places:
     cases: []
   marion:
     label: Marion County
-    population: 365579
+    population: 365_579
     cases: []
   martin:
     label: Martin County
