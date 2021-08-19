@@ -7,7 +7,6 @@
 # next.js
 /.next
 /html
-/data
 
 # production
 /build

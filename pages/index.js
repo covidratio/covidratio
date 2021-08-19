@@ -1,7 +1,6 @@
 import { Message } from '@wikimedia/react.i18n';
 import Layout from '../components/layout';
 import Admin from '../components/list/admin';
-import ADMINS from '../utils/admins';
 import Header from '../components/header';
 
 function Index({ admins }) {
@@ -16,9 +15,9 @@ function Index({ admins }) {
           <main>
             <div className="list-group mb-3">
               {admins.map(({
-                id, name, slug, places,
+                label, slug, places,
               }) => (
-                <Admin key={id} name={name} slug={slug} places={places} />
+                <Admin key={slug} name={label} slug={slug} places={places} />
               ))}
             </div>
           </main>
@@ -29,13 +28,27 @@ function Index({ admins }) {
 }
 
 export async function getStaticProps() {
-  const { places } = require('../data/app.json');
+  const path = require('path');
+  const { readdir, readFile } = require('fs/promises');
+  const yaml = require('js-yaml');
 
-  const admins = ADMINS.map(({ id, name, slug }) => ({
-    id,
-    name,
-    slug,
-    places: places.filter((place) => place.admin === id),
+  const files = await readdir(path.join(process.cwd(), 'data'));
+
+  const admins = await Promise.all(files.map(async (filename) => {
+    const slug = path.basename(filename, path.extname(filename));
+
+    const result = await readFile(path.join(process.cwd(), 'data', filename));
+
+    const { label, places } = yaml.load(result);
+
+    return {
+      slug,
+      label,
+      places: Object.keys(places).map((key) => ({
+        slug: key,
+        ...places[key],
+      })),
+    };
   }));
 
   return {

@@ -1,65 +1,19 @@
-import { useReducer, useMemo } from 'react';
 import { DateTime } from 'luxon';
-import { filter, map, switchMap } from 'rxjs/operators';
 import { Message } from '@wikimedia/react.i18n';
-import useReactor from '@cinematix/reactor';
-import ADMINS from '../../utils/admins';
 import Layout from '../../components/layout';
 import Header from '../../components/header';
 
-const CASE_COUNT = 'CASE_COUNT';
-
-const initialState = {
-  caseCount: null,
-  datetime: null,
-};
-
-function reducer(state, action) {
-  switch (action.type) {
-    case CASE_COUNT:
-      return {
-        ...state,
-        caseCount: action.payload.count,
-        datetime: action.payload.datetime,
-      };
-    default:
-      throw new Error('Invalid Action');
-  }
-}
-
 function Place({
-  label, name, pop, adminSlug,
+  label, population, adminLabel, updated, caseCount, authority,
 }) {
-  const [state, dispatch] = useReducer(reducer, initialState);
-
-  const { name: adminLabel, caseCount, authority = {} } = useMemo(() => (
-    ADMINS.find((admin) => admin.slug === adminSlug) || {}
-  ), [
-    adminSlug,
-  ]);
-
-  useReactor((value$) => (
-    value$.pipe(
-      filter(([countyName, fetchCaseCount]) => (countyName && fetchCaseCount)),
-      switchMap(([countyName, fetchCaseCount]) => fetchCaseCount(countyName)),
-      map((payload) => ({
-        type: CASE_COUNT,
-        payload,
-      })),
-    )
-  ), dispatch, [
-    name,
-    caseCount,
-  ]);
-
   let ratio = null;
-  if (state.caseCount) {
-    ratio = Math.round(pop / state.caseCount).toLocaleString();
+  if (caseCount) {
+    ratio = Math.round(population / caseCount).toLocaleString();
   }
 
   let datetime = null;
-  if (state.datetime) {
-    datetime = DateTime.fromISO(state.datetime).toLocaleString(DateTime.DATETIME_SHORT);
+  if (updated) {
+    datetime = DateTime.fromISO(updated).toLocaleString(DateTime.DATE_SHORT);
   }
 
   // @TODO Get the localized name?
@@ -90,8 +44,8 @@ function Place({
                 id="explanation"
                 placeholders={[
                   <em>{label}</em>,
-                  pop.toLocaleString(),
-                  state.caseCount ? state.caseCount.toLocaleString() : null,
+                  population.toLocaleString(),
+                  caseCount ? caseCount.toLocaleString() : null,
                   <a href="https://www.wikidata.org/wiki/Q93050329">Nathan D L Smith ALM</a>,
                   <a href="https://www.instagram.com/p/CEDPeb6Dod2/"><Message id="video" /></a>,
                 ]}
@@ -115,35 +69,68 @@ function Place({
 }
 
 export async function getStaticProps({ params }) {
-  const { places } = require('../../data/app.json');
+  const path = require('path');
+  const { readFile } = require('fs/promises');
+  const yaml = require('js-yaml');
   const { slug, admin: adminSlug } = params;
 
+  const result = await readFile(path.join(process.cwd(), 'data', `${adminSlug}.yml`));
+
   const {
-    id, label, name, pop,
-  } = places.find((place) => place.slug === slug);
+    label: adminLabel,
+    updated,
+    authority,
+    places,
+  } = yaml.load(result);
+
+  const {
+    label, population, cases,
+  } = places[slug];
+
+  const caseCount = cases ? cases.reduce((sum, count) => sum + count, 0) : [];
 
   return {
     props: {
-      id,
       label,
-      name,
-      pop,
-      adminSlug,
+      updated,
+      adminLabel,
+      authority,
+      population,
+      caseCount,
     },
   };
 }
 
 export async function getStaticPaths() {
-  const { places } = require('../../data/app.json');
-  const adminMap = ADMINS.reduce((acc, admin) => acc.set(admin.id, admin), new Map());
+  const path = require('path');
+  const { readdir, readFile } = require('fs/promises');
+  const yaml = require('js-yaml');
+
+  const files = await readdir(path.join(process.cwd(), 'data'));
+
+  const admins = await Promise.all(files.map(async (filename) => {
+    const slug = path.basename(filename, path.extname(filename));
+
+    const result = await readFile(path.join(process.cwd(), 'data', filename));
+
+    const { places } = yaml.load(result);
+
+    return {
+      slug,
+      places: Object.keys(places).map((key) => ({
+        slug: key,
+        ...places[key],
+      })),
+    };
+  }));
+
+  const paths = admins.reduce((acc, { slug: admin, places }) => {
+    places.forEach(({ slug }) => acc.add({ admin, slug }));
+    return acc;
+  }, new Set());
 
   return {
-    paths: places.map(({ admin, slug }) => ({
-      params: {
-        slug,
-        admin: adminMap.get(admin).slug,
-      },
-    })),
+    paths: Array.from(paths).map((params) => ({ params })),
     fallback: false,
   };
 }

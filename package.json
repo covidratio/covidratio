@@ -4,22 +4,21 @@
   "license": "AGPL-3.0-or-later",
   "main": "index.js",
   "scripts": {
-    "dev": "./bin/data.js && next dev",
-    "build": "./bin/data.js && next build && next export -o ./html",
+    "dev": "next dev",
+    "build": "next build && next export -o ./html",
     "start": "next start",
     "test": "eslint --ignore-path .gitignore ."
   },
   "dependencies": {
     "@chickaree/language-loader": "^1.0.2",
-    "@cinematix/reactor": "^2.0.0",
     "@wikimedia/react.i18n": "^2.0.2",
     "bootstrap": "^4.5.2",
+    "js-yaml": "^4.1.0",
     "luxon": "^1.25.0",
     "next": "^10.0.4",
     "node-fetch": "^2.6.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "rxjs": "^6.6.2",
     "sass": "^1.26.10",
     "slugify": "^1.4.5"
   },
