@@ -1,7 +1,7 @@
 # Weekly Report
 # http://ww11.doh.state.fl.us/comm/_partners/covid19_report_archive/covid19-data/covid19_data_latest.pdf
 # Previous Snapshots
-# https://web.archive.org/web/http://ww11.doh.state.fl.us/comm/_partners/covid19_report_archive/covid19-data/covid19_data_latest.pdf
+# https://web.archive.org/web/*/http://ww11.doh.state.fl.us/comm/_partners/covid19_report_archive/covid19-data/covid19_data_latest.pdf
 
 label: Florida
 updated: '2021-08-13'
@@ -140,7 +140,7 @@ places:
   lake:
     label: Lake County
     population: 367_118
-    cases: []
+    cases: [2_114, 4_163]
   lee:
     label: Lee County
     population: 770_577
