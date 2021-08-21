@@ -4,7 +4,7 @@
 # https://web.archive.org/web/*/http://ww11.doh.state.fl.us/comm/_partners/covid19_report_archive/covid19-data/covid19_data_latest.pdf
 
 label: Florida
-updated: '2021-08-13'
+updated: '2021-08-20'
 authority:
   name: Florida Department of Health
   href: http://www.floridahealth.gov/
@@ -140,7 +140,7 @@ places:
   lake:
     label: Lake County
     population: 367_118
-    cases: [2_114, 4_163]
+    cases: [4_163, 2_452]
   lee:
     label: Lee County
     population: 770_577
@@ -196,7 +196,7 @@ places:
   orange:
     label: Orange County
     population: 1_393_452
-    cases: [8_822, 9_598]
+    cases: [9_598, 8_880]
   osceola:
     label: Osceola County
     population: 375_751
@@ -236,7 +236,7 @@ places:
   sarasota:
     label: Sarasota County
     population: 433_742
-    cases: [1_934, 2_377]
+    cases: [2_377, 2_772]
   seminole:
     label: Seminole County
     population: 471_826
