@@ -140,7 +140,7 @@ places:
   lake:
     label: Lake County
     population: 367_118
-    cases: [4_163, 2_452]
+    cases: [2_466, 2_452]
   lee:
     label: Lee County
     population: 770_577
