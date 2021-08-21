@@ -12,131 +12,139 @@ places:
   alachua:
     label: Alachua County
     population: 269_043
-    cases: []
+    cases: [1_644, 1_494]
+  baker:
+    label: Baker County
+    population: 29_210
+    cases: [245, 282]
   bay:
     label: Bay County
     population: 174_705
-    cases: []
+    cases: [1_414, 1_064]
   bradford:
     label: Bradford County
     population: 28_201
-    cases: []
+    cases: [208, 252]
   brevard:
     label: Brevard County
     population: 601_942
-    cases: []
+    cases: [4_344, 4_550]
   broward:
     label: Broward County
     population: 1_952_778
-    cases: []
+    cases: [14_675, 13_521]
   calhoun:
     label: Calhoun County
     population: 14_105
-    cases: []
+    cases: [161, 167]
   charlotte:
     label: Charlotte County
     population: 188_910
-    cases: []
+    cases: [833, 1_125]
   citrus:
     label: Citrus County
     population: 149_657
-    cases: []
+    cases: [956, 901]
   clay:
     label: Clay County
     population: 219_252
-    cases: []
+    cases: [1_504, 1_256]
   collier:
     label: Collier County
     population: 384_902
-    cases: []
+    cases: [2_168, 2_268]
   columbia:
     label: Columbia County
     population: 71_686
-    cases: []
+    cases: [1_067, 946]
+  dade:
+    label: Miami-Dade County
+    population: 2_716_940
+    cases: [21_561, 19_906]
   desoto:
     label: DeSoto County
     population: 38_001
-    cases: []
+    cases: [208, 270]
   dixie:
     label: Dixie County
     population: 16_826
-    cases: []
+    cases: [132, 131]
   duval:
     label: Duval County
     population: 957_755
-    case: []
+    case: [6_358, 5_335]
   escambia:
     label: Escambia County
     population: 318_316
-    cases: []
+    cases: [2_217, 2_419]
   flagler:
     label: Flagler County
     population: 115_081
-    cases: []
+    cases: [694, 731]
   franklin:
     label: Franklin County
     population: 12_125
-    cases: []
+    cases: [136, 94]
   gadsden:
     label: Gadsden County
     population: 45_660
-    cases: []
+    cases: [425, 314]
   gilchrist:
     label: Gilchrist County
     population: 18_582
-    cases: []
+    cases: [184, 145]
   glades:
     label: Glades County
     population: 13_811
-    cases: []
+    cases: [40, 58]
   gulf:
     label: Gulf County
     population: 13_639
-    cases: []
+    cases: [96, 79]
   hamilton:
     label: Hamilton County
     population: 14_428
-    cases: []
+    cases: [119, 166]
   hardee:
     label: Hardee County
     population: 26_937
-    cases: []
+    cases: [226, 325]
   hendry:
     label: Hendry County
     population: 42_022
-    cases: []
+    cases: [222, 406]
   hernando:
     label: Hernando County
     population: 193_920
-    cases: []
+    cases: [1_501, 1_746]
   highlands:
     label: Highlands County
     population: 106_221
-    cases: []
+    cases: [626, 730]
   hillsborough:
     label: Hillsborough County
     population: 1_471_968
-    cases: []
+    cases: [10_920, 11_161]
   holmes:
     label: Holmes County
     population: 19_617
-    cases: []
+    cases: [185, 182]
   indian-river:
     label: Indian River County
     population: 159_923
-    cases: []
+    cases: [1_010, 1_174]
   jackson:
     label: Jackson County
     population: 46_414
-    cases: []
+    cases: [348, 389]
   jefferson:
     label: Jefferson County
     population: 14_246
-    cases: []
+    cases: [123, 138]
   lafayette:
     label: Lafayette County
     population: 8_422
-    cases: []
+    cases: [78, 67]
   lake:
     label: Lake County
     population: 367_118
@@ -144,55 +152,51 @@ places:
   lee:
     label: Lee County
     population: 770_577
-    cases: []
+    cases: [5_585, 6_587]
   leon:
     label: Leon County
     population: 293_582
-    cases: []
+    cases: [2_401, 1_831]
   levy:
     label: Levy County
     population: 41_503
-    cases: []
+    cases: [370, 429]
   liberty:
     label: Liberty County
     population: 8_354
-    cases: []
+    cases: [92, 90]
   madison:
     label: Madison County
     population: 18_493
-    cases: []
+    cases: [133, 164]
   manatee:
     label: Manatee County
     population: 403_253
-    cases: []
+    cases: [2_639, 3_445]
   marion:
     label: Marion County
     population: 365_579
-    cases: []
+    cases: [2_655, 2_840]
   martin:
     label: Martin County
     population: 161_000
-    cases: []
-  dade:
-    label: Miami-Dade County
-    population: 2_716_940
-    cases: []
+    cases: [652, 673]
   monroe:
     label: Monroe County
     population: 74_228
-    cases: []
+    cases: [504, 491]
   nassau:
     label: Nassau County
     population: 88_625
-    cases: []
+    cases: [659, 547]
   okaloosa:
     label: Okaloosa County
     population: 210_738
-    cases: []
+    cases: [1_396, 1_511]
   okeechobee:
     label: Okeechobee County
     population: 42_168
-    cases: []
+    cases: [260, 380]
   orange:
     label: Orange County
     population: 1_393_452
@@ -200,39 +204,31 @@ places:
   osceola:
     label: Osceola County
     population: 375_751
-    cases: []
+    cases: [2_969, 2_676]
   palm-beach:
     label: Palm Beach County
     population: 1_496_770
-    cases: []
+    cases: [9_159, 9_257]
   pasco:
     label: Pasco County
     population: 553_947
-    cases: []
+    cases: [3_871, 4_223]
   pinellas:
     label: Pinellas County
     population: 974_996
-    cases: []
+    cases: [6_434, 6_271]
   polk:
     label: Polk County
     population: 724_777
-    cases: []
+    cases: [6_521, 6_983]
   putnam:
     label: Putnam County
     population: 74_521
-    cases: []
-  st-johns:
-    label: St. Johns County
-    population: 264_672
-    cases: []
-  st-lucie:
-    label: St. Lucie County
-    population: 328_297
-    cases: []
+    cases: [643, 615]
   santa-rosa:
     label: Santa Rosa County
     population: 184_313
-    cases: []
+    cases: [1_330, 1_536]
   sarasota:
     label: Sarasota County
     population: 433_742
@@ -240,36 +236,44 @@ places:
   seminole:
     label: Seminole County
     population: 471_826
-    cases: []
+    cases: [2_928, 2_909]
+  st-johns:
+    label: St. Johns County
+    population: 264_672
+    cases: [1_503, 1_245]
+  st-lucie:
+    label: St. Lucie County
+    population: 328_297
+    cases: [2_029, 2_192]
   sumter:
     label: Sumter County
     population: 132_420
-    cases: []
+    cases: [450, 539]
   suwannee:
     label: Suwannee County
     population: 44_417
-    cases: []
+    cases: [470, 476]
   taylor:
     label: Taylor County
     population: 21_569
-    cases: []
+    cases: [162, 182]
   union:
     label: Union County
     population: 15_237
-    cases: []
+    cases: [156, 145]
   volusia:
     label: Volusia County
     population: 553_284
-    cases: []
+    cases: [3_293, 2_764]
   wakulla:
     label: Wakulla County
     population: 33_739
-    cases: []
+    cases: [400, 334]
   walton:
     label: Walton County
     population: 74_071
-    cases: []
+    cases: [497, 633]
   washington:
     label: Washington County
     population: 25_473
-    cases: []
+    cases: [185, 252]
