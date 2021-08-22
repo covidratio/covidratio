@@ -72,7 +72,7 @@ places:
   duval:
     label: Duval County
     population: 957_755
-    case: [6_358, 5_335]
+    cases: [6_358, 5_335]
   escambia:
     label: Escambia County
     population: 318_316

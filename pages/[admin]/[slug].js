@@ -2,15 +2,12 @@ import { DateTime } from 'luxon';
 import { Message } from '@wikimedia/react.i18n';
 import Layout from '../../components/layout';
 import Header from '../../components/header';
+import calculateRatio from '../../util/ratio';
+import caseCount from '../../util/case-count';
 
 function Place({
-  label, population, adminLabel, updated, caseCount, authority,
+  label, population, adminLabel, updated, caseCount, ratio, authority,
 }) {
-  let ratio = null;
-  if (caseCount) {
-    ratio = Math.round(population / caseCount).toLocaleString();
-  }
-
   let datetime = null;
   if (updated) {
     datetime = DateTime.fromISO(updated).toLocaleString(DateTime.DATE_SHORT);
@@ -24,14 +21,14 @@ function Place({
           <Header>
             {label}
             <span> </span>
-            <span className="small">{adminLabel}</span>
+            <span className="fs-2 fw-normal">{adminLabel}</span>
           </Header>
           <main className="d-flex flex-column justify-content-center flex-grow-1">
             <p className="result text-center">
               <Message
                 id="result"
                 placeholders={[
-                  <span className="d-block"><strong className="ratio">{ratio || '\u00A0'}</strong></span>,
+                  <span className="d-block"><strong className="ratio">{ratio ? ratio.toLocaleString() : '\u00A0'}</strong></span>,
                   <em>{label}</em>,
                   <strong>{datetime}</strong>,
                 ]}
@@ -87,8 +84,6 @@ export async function getStaticProps({ params }) {
     label, population, cases,
   } = places[slug];
 
-  const caseCount = cases ? cases.reduce((sum, count) => sum + count, 0) : [];
-
   return {
     props: {
       label,
@@ -96,7 +91,8 @@ export async function getStaticProps({ params }) {
       adminLabel,
       authority,
       population,
-      caseCount,
+      caseCount: caseCount(cases),
+      ratio: calculateRatio(population, cases),
     },
   };
 }

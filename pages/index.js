@@ -2,6 +2,7 @@ import { Message } from '@wikimedia/react.i18n';
 import Layout from '../components/layout';
 import Admin from '../components/list/admin';
 import Header from '../components/header';
+import calculateRatio from '../util/ratio';
 
 function Index({ admins }) {
   // @TODO Get the localized name?
@@ -46,7 +47,8 @@ export async function getStaticProps() {
       label,
       places: Object.keys(places).map((key) => ({
         slug: key,
-        ...places[key],
+        label: places[key].label,
+        ratio: calculateRatio(places[key].population, places[key].cases),
       })),
     };
   }));
