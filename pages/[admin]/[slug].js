@@ -6,7 +6,7 @@ import calculateRatio from '../../util/ratio';
 import caseCount from '../../util/case-count';
 
 function Place({
-  label, population, adminLabel, updated, caseCount, ratio, authority,
+  label, population, adminLabel, updated, caseCount: count, ratio, authority,
 }) {
   let datetime = null;
   if (updated) {
@@ -42,7 +42,7 @@ function Place({
                 placeholders={[
                   <em>{label}</em>,
                   population.toLocaleString(),
-                  caseCount ? caseCount.toLocaleString() : null,
+                  count ? count.toLocaleString() : null,
                   <a href="https://www.wikidata.org/wiki/Q93050329">Nathan D L Smith ALM</a>,
                   <a href="https://www.instagram.com/p/CEDPeb6Dod2/"><Message id="video" /></a>,
                 ]}
