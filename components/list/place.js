@@ -7,7 +7,7 @@ function Place({
 
   if (ratio !== 0) {
     ratioBadge = (
-      <span className="badge bg-secondary text-primary">{ratio.toLocaleString()}</span>
+      <span className="badge bg-secondary text-primary fs-6">{ratio.toLocaleString()}</span>
     );
   }
 
