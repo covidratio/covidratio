@@ -11,82 +11,102 @@ authority:
 places:
   alachua:
     label: Alachua County
+    twitter: AlachuaCounty
     population: 269_043
     cases: [1_644, 1_494]
   baker:
     label: Baker County
+    twitter: ~
     population: 29_210
     cases: [245, 282]
   bay:
     label: Bay County
+    twitter: ~
     population: 174_705
     cases: [1_414, 1_064]
   bradford:
     label: Bradford County
+    twitter: ~
     population: 28_201
     cases: [208, 252]
   brevard:
     label: Brevard County
+    twitter: BrevardCo_FL
     population: 601_942
     cases: [4_344, 4_550]
   broward:
     label: Broward County
+    twitter: BrowardCounty
     population: 1_952_778
     cases: [14_675, 13_521]
   calhoun:
     label: Calhoun County
+    twitter: ~
     population: 14_105
     cases: [161, 167]
   charlotte:
     label: Charlotte County
+    twitter: charlottecofl
     population: 188_910
     cases: [833, 1_125]
   citrus:
     label: Citrus County
+    twitter: ~
     population: 149_657
     cases: [956, 901]
   clay:
     label: Clay County
+    twitter: ClayCo_FL
     population: 219_252
     cases: [1_504, 1_256]
   collier:
     label: Collier County
+    twitter: CollierPIO
     population: 384_902
     cases: [2_168, 2_268]
   columbia:
     label: Columbia County
+    twitter: ~
     population: 71_686
     cases: [1_067, 946]
   dade:
     label: Miami-Dade County
+    twitter: MiamiDadeCounty
     population: 2_716_940
     cases: [21_561, 19_906]
   desoto:
     label: DeSoto County
+    twitter: ~
     population: 38_001
     cases: [208, 270]
   dixie:
     label: Dixie County
+    twitter: ~
     population: 16_826
     cases: [132, 131]
   duval:
     label: Duval County
+    twitter: CityofJax
     population: 957_755
     cases: [6_358, 5_335]
   escambia:
     label: Escambia County
+    twitter: myescambia
     population: 318_316
     cases: [2_217, 2_419]
   flagler:
     label: Flagler County
+    twitter: FlaglerCtyGov
     population: 115_081
     cases: [694, 731]
   franklin:
     label: Franklin County
+    twitter: ~
     population: 12_125
     cases: [136, 94]
   gadsden:
     label: Gadsden County
+    twitter: GadsdenCtyBOCC
     population: 45_660
     cases: [425, 314]
   gilchrist:
