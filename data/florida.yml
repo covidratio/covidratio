@@ -256,73 +256,91 @@ places:
     cases: [2_676, 2_576]
   palm-beach:
     label: Palm Beach County
+    twitter: pbcgov
     population: 1_496_770
     cases: [9_257, 8_595]
   pasco:
     label: Pasco County
+    twitter: PascoCountyPIO
     population: 553_947
     cases: [4_223, 4_433]
   pinellas:
     label: Pinellas County
+    twitter: PinellasCoNews
     population: 974_996
     cases: [6_271, 6_790]
   polk:
     label: Polk County
+    twitter: PolkCountyFL
     population: 724_777
     cases: [6_983, 7_510]
   putnam:
     label: Putnam County
+    twitter: fl_putnam
     population: 74_521
     cases: [615, 580]
   santa-rosa:
     label: Santa Rosa County
+    twitter: ~
     population: 184_313
     cases: [1_536, 2_101]
   sarasota:
     label: Sarasota County
+    twitter: SRQCountyGov
     population: 433_742
     cases: [2_772, 3_375]
   seminole:
     label: Seminole County
+    twitter: seminolecounty
     population: 471_826
     cases: [2_909, 2_747]
   st-johns:
     label: St. Johns County
+    twitter: StJohnsCounty
     population: 264_672
     cases: [1_245, 1_442]
   st-lucie:
     label: St. Lucie County
+    twitter: StLucieGOV
     population: 328_297
     cases: [2_192, 2_322]
   sumter:
     label: Sumter County
+    twitter: ~
     population: 132_420
     cases: [539, 592]
   suwannee:
     label: Suwannee County
+    twitter: SuwanneeCounty
     population: 44_417
     cases: [476, 575]
   taylor:
     label: Taylor County
+    twitter: ~
     population: 21_569
     cases: [182, 401]
   union:
     label: Union County
+    twitter: ~
     population: 15_237
     cases: [145, 116]
   volusia:
     label: Volusia County
+    twitter: CountyOfVolusia
     population: 553_284
     cases: [2_764, 2_607]
   wakulla:
     label: Wakulla County
+    twitter: ~
     population: 33_739
     cases: [334, 342]
   walton:
     label: Walton County
+    twitter: ~
     population: 74_071
     cases: [633, 750]
   washington:
     label: Washington County
+    twitter: ~
     population: 25_473
     cases: [252, 238]
