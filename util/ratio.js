@@ -1,4 +1,4 @@
-import caseCount from './case-count';
+import caseCount from './case-count.js';
 
 function calculateRatio(population, cases) {
   const count = caseCount(cases);

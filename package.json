@@ -2,7 +2,7 @@
   "name": "covidratio.com",
   "version": "0.1.0",
   "license": "AGPL-3.0-or-later",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export -o ./html",
