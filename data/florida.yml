@@ -74,7 +74,7 @@ places:
     twitter: MiamiDadeCounty
     population: 2_716_940
     cases: [3_816, 3_033]
-  desoto:W<
+  desoto:
     label: DeSoto County
     twitter: ~
     population: 38_001
