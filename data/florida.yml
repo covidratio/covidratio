@@ -213,7 +213,7 @@ places:
     label: Manatee County
     twitter: ManateeGov
     population: 403_253
-    cases: [155, 173f]
+    cases: [155, 173]
   marion:
     label: Marion County
     twitter: MarionCountyGov
