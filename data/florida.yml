@@ -4,7 +4,7 @@
 # https://web.archive.org/web/*/http://ww11.doh.state.fl.us/comm/_partners/covid19_report_archive/covid19-data/covid19_data_latest.pdf
 
 label: Florida
-updated: '2022-02-04'
+updated: '2022-02-11'
 authority:
   name: Florida Department of Health
   href: http://www.floridahealth.gov/
@@ -13,334 +13,334 @@ places:
     label: Alachua County
     twitter: AlachuaCounty
     population: 269_043
-    cases: [3_596, 2_330]
+    cases: [2_330, 1_297]
   baker:
     label: Baker County
     twitter: ~
     population: 29_210
-    cases: [545, 331]
+    cases: [331, 205]
   bay:
     label: Bay County
     twitter: ~
     population: 174_705
-    cases: [2_431, 1_543]
+    cases: [1_543, 769]
   bradford:
     label: Bradford County
     twitter: ~
     population: 28_201
-    cases: [370, 273]
+    cases: [273, 174]
   brevard:
     label: Brevard County
     twitter: BrevardCo_FL
     population: 601_942
-    cases: [6_123, 4_202]
+    cases: [4_202, 2_884]
   broward:
     label: Broward County
     twitter: BrowardCounty
     population: 1_952_778
-    cases: [12_024, 7_869]
+    cases: [7_869, 7_478]
   calhoun:
     label: Calhoun County
     twitter: ~
     population: 14_105
-    cases: [234, 100]
+    cases: [100, 54]
   charlotte:
     label: Charlotte County
     twitter: charlottecofl
     population: 188_910
-    cases: [1_659, 1_207]
+    cases: [1_207, 920]
   citrus:
     label: Citrus County
     twitter: ~
     population: 149_657
-    cases: [1_472, 1_140]
+    cases: [1_140, 729]
   clay:
     label: Clay County
     twitter: ClayCo_FL
     population: 219_252
-    cases: [3_185, 2_059]
+    cases: [2_059, 1_426]
   collier:
     label: Collier County
     twitter: CollierPIO
     population: 384_902
-    cases: [2_370, 1_777]
+    cases: [1_777, 1_066]
   columbia:
     label: Columbia County
     twitter: ~
     population: 71_686
-    cases: [1_169, 716]
+    cases: [716, 447]
   dade:
     label: Miami-Dade County
     twitter: MiamiDadeCounty
     population: 2_716_940
-    cases: [23_596, 16_617]
+    cases: [16_617, 19_976]
   desoto:
     label: DeSoto County
     twitter: ~
     population: 38_001
-    cases: [403, 229]
+    cases: [229, 154]
   dixie:
     label: Dixie County
     twitter: ~
     population: 16_826
-    cases: [198, 164]
+    cases: [164, 100]
   duval:
     label: Duval County
     twitter: CityofJax
     population: 957_755
-    cases: [10_795, 6,838]
+    cases: [6_838, 4_116]
   escambia:
     label: Escambia County
     twitter: myescambia
     population: 318_316
-    cases: [3_180, 1_805]
+    cases: [1_805, 1_541]
   flagler:
     label: Flagler County
     twitter: FlaglerCtyGov
     population: 115_081
-    cases: [1_185, 708]
+    cases: [708, 408]
   franklin:
     label: Franklin County
     twitter: ~
     population: 12_125
-    cases: [191, 78]
+    cases: [78, 97]
   gadsden:
     label: Gadsden County
     twitter: GadsdenCtyBOCC
     population: 45_660
-    cases: [648, 453]
+    cases: [453, 275]
   gilchrist:
     label: Gilchrist County
     twitter: ~
     population: 18_582
-    cases: [275, 216]
+    cases: [216, 97]
   glades:
     label: Glades County
     twitter: ~
     population: 13_811
-    cases: [62, 34]
+    cases: [34, 19]
   gulf:
     label: Gulf County
     twitter: ~
     population: 13_639
-    cases: [207, 160]
+    cases: [160, 110]
   hamilton:
     label: Hamilton County
     twitter: ~
     population: 14_428
-    cases: [150, 86]
+    cases: [86, 56]
   hardee:
     label: Hardee County
     twitter: ~
     population: 26_937
-    cases: [393, 236]
+    cases: [236, 172]
   hendry:
     label: Hendry County
     twitter: HendryCountyGov
     population: 42_022
-    cases: [473, 267]
+    cases: [267, 183]
   hernando:
     label: Hernando County
     twitter: HernandoCoGov
     population: 193_920
-    cases: [1_837, 1_383]
+    cases: [1_383, 874]
   highlands:
     label: Highlands County
     twitter: HighlandsFLBCC
     population: 106_221
-    cases: [1_106, 867]
+    cases: [867, 511]
   hillsborough:
     label: Hillsborough County
     twitter: HillsboroughFL
     population: 1_471_968
-    cases: [13_514, 8_590]
+    cases: [8_590, 7_681]
   holmes:
     label: Holmes County
     twitter: ~
     population: 19_617
-    cases: [281, 137]
+    cases: [137, 82]
   indian-river:
     label: Indian River County
     twitter: IRCGOV
     population: 159_923
-    cases: [1_275, 758]
+    cases: [758, 517]
   jackson:
     label: Jackson County
     twitter: ~
     population: 46_414
-    cases: [846, 477]
+    cases: [477, 265]
   jefferson:
     label: Jefferson County
     twitter: ~
     population: 14_246
-    cases: [198, 155]
+    cases: [155, 87]
   lafayette:
     label: Lafayette County
     twitter: ~
     population: 8_422
-    cases: [110, 75]
+    cases: [75, 50]
   lake:
     label: Lake County
     twitter: lakegov
     population: 367_118
-    cases: [3_603, 2_486]
+    cases: [2_486,1_675]
   lee:
     label: Lee County
     twitter: LeeCountyFLBOCC
     population: 770_577
-    cases: [6_852, 4_882]
+    cases: [4_882, 3_264]
   leon:
     label: Leon County
     twitter: LeonCounty
     population: 293_582
-    cases: [4_199, 2_768]
+    cases: [2_768, 1_912]
   levy:
     label: Levy County
     twitter: ~
     population: 41_503
-    cases: [555, 366]
+    cases: [366, 196]
   liberty:
     label: Liberty County
     twitter: ~
     population: 8_354
-    cases: [140, 57]
+    cases: [57, 35]
   madison:
     label: Madison County
     twitter: ~
     population: 18_493
-    cases: [458, 259]
+    cases: [259, 141]
   manatee:
     label: Manatee County
     twitter: ManateeGov
     population: 403_253
-    cases: [3_751, 2_922]
+    cases: [2_922, 1_882]
   marion:
     label: Marion County
     twitter: MarionCountyGov
     population: 365_579
-    cases: [3_955, 2_621]
+    cases: [2_621, 1_564]
   martin:
     label: Martin County
     twitter: MartinCountygov
     population: 161_000
-    cases: [1_139, 615]
+    cases: [615, 396]
   monroe:
     label: Monroe County
     twitter: monroecounty
     population: 74_228
-    cases: [501, 284]
+    cases: [284, 248]
   nassau:
     label: Nassau County
     twitter: FlNassau
     population: 88_625
-    cases: [1_044, 620]
+    cases: [620, 385]
   okaloosa:
     label: Okaloosa County
     twitter: OkaloosaCounty
     population: 210_738
-    cases: [2_883, 1_632]
+    cases: [1_632, 945]
   okeechobee:
     label: Okeechobee County
     twitter: ~
     population: 42_168
-    cases: [416, 233]
+    cases: [233, 95]
   orange:
     label: Orange County
     twitter: OrangeCoFL
     population: 1_393_452
-    cases: [12_514, 7_934]
+    cases: [7_934, 6_369]
   osceola:
     label: Osceola County
     twitter: OsceolaCountyFl
     population: 375_751
-    cases: [3_388, 2_348]
+    cases: [2_348, 1_978]
   palm-beach:
     label: Palm Beach County
     twitter: pbcgov
     population: 1_496_770
-    cases: [8_741, 5_793]
+    cases: [5_793, 4_874]
   pasco:
     label: Pasco County
     twitter: PascoCountyPIO
     population: 553_947
-    cases: [5_569, 3_680]
+    cases: [3_680, 2_454]
   pinellas:
     label: Pinellas County
     twitter: PinellasCoNews
     population: 974_996
-    cases: [8_984, 5_717]
+    cases: [5_717, 4_004]
   polk:
     label: Polk County
     twitter: PolkCountyFL
     population: 724_777
-    cases: [7_852, 5_268]
+    cases: [5_268, 3_414]
   putnam:
     label: Putnam County
     twitter: fl_putnam
     population: 74_521
-    cases: [845, 490]
+    cases: [490, 282]
   santa-rosa:
     label: Santa Rosa County
     twitter: ~
     population: 184_313
-    cases: [2_278, 1_652]
+    cases: [1_652, 1_450]
   sarasota:
     label: Sarasota County
     twitter: SRQCountyGov
     population: 433_742
-    cases: [3_788, 3_246]
+    cases: [3_246, 2_192]
   seminole:
     label: Seminole County
     twitter: seminolecounty
     population: 471_826
-    cases: [4_236, 2_775]
+    cases: [2_775, 1_678]
   st-johns:
     label: St. Johns County
     twitter: StJohnsCounty
     population: 264_672
-    cases: [3_232, 2_452]
+    cases: [2_452, 1_584]
   st-lucie:
     label: St. Lucie County
     twitter: StLucieGOV
     population: 328_297
-    cases: [2_498, 1_595]
+    cases: [1_595, 1_021]
   sumter:
     label: Sumter County
     twitter: ~
     population: 132_420
-    cases: [993, 731]
+    cases: [731, 486]
   suwannee:
     label: Suwannee County
     twitter: SuwanneeCounty
     population: 44_417
-    cases: [697, 464]
+    cases: [464, 293]
   taylor:
     label: Taylor County
     twitter: ~
     population: 21_569
-    cases: [584, 339]
+    cases: [339, 206]
   union:
     label: Union County
     twitter: ~
     population: 15_237
-    cases: [245, 106]
+    cases: [106, 84]
   volusia:
     label: Volusia County
     twitter: CountyOfVolusia
     population: 553_284
-    cases: [4_961, 3_378]
+    cases: [3_378, 2_499]
   wakulla:
     label: Wakulla County
     twitter: ~
     population: 33_739
-    cases: [513, 404]
+    cases: [404, 251]
   walton:
     label: Walton County
     twitter: ~
     population: 74_071
-    cases: [752, 422]
+    cases: [422, 266]
   washington:
     label: Washington County
     twitter: ~
     population: 25_473
-    cases: [452, 202]
+    cases: [202, 79]
