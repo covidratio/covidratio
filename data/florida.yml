@@ -203,12 +203,12 @@ places:
     label: Liberty County
     twitter: ~
     population: 8_354
-    cases: [57, 12]
+    cases: [35, 12]
   madison:
     label: Madison County
     twitter: ~
     population: 18_493
-    cases: [259, 38]
+    cases: [141, 38]
   manatee:
     label: Manatee County
     twitter: ManateeGov
