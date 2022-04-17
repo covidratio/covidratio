@@ -45,6 +45,7 @@ function Place({
                   count ? count.toLocaleString() : null,
                   <a href="https://www.wikidata.org/wiki/Q93050329">Nathan D L Smith ALM</a>,
                   <a href="https://www.instagram.com/p/CEDPeb6Dod2/"><Message id="video" /></a>,
+                  <del>14</del>,
                 ]}
               />
             </p>

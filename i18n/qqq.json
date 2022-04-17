@@ -6,7 +6,7 @@
 	},
 	"title": "Title of the website",
 	"result": "The result of the ratio calculation for a given locale.\nParameters:\n* $1 - Ratio of people with COVID-19\n* $2 - Location\n* $3 - Date updated",
-	"explanation": "Explanation of how ratio is calculated. Displayed in the footer of a place.\nParameters:\n* $1 - Place name\n* $2 - Population of place\n* $3 - Number of cases in place.\n* $4 - Name of person who published video\n* $5 - {{msg-mw|covidratio-video}}",
+	"explanation": "Explanation of how ratio is calculated. Displayed in the footer of a place.\nParameters:\n* $1 - Place name\n* $2 - Population of place\n* $3 - Number of cases in place.\n* $4 - Name of person who published video\n* $5 - {{msg-mw|covidratio-video}}\n* $6 - The numeral 14 struck through since it is no longer valid.",
 	"video": "Word to describe an online video.\n{{Identical|Video}}",
 	"source": "Data source and code source statement. Displayed in the footer of a place.\nParameters:\n* $1 - Name of the source of the data.\n* $2 - {{msg-mw|covidratio-source-code}}\n* $3 - {{msg-mw|covidratio-license}}",
 	"source-code": "Phrase to describe the code of software",
